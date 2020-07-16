@@ -1,6 +1,6 @@
 module.exports = {
   extend: "apostrophe-widgets",
-  label: "Titulo Pagina",
+  label: "Header",
   contextualOnly: true,
   addFields: [
     {
