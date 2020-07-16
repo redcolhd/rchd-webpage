@@ -1,0 +1,26 @@
+.contenedor-titulo-imagen {
+  display: grid;
+  grid-template-columns: 1px, 1px, 1px;
+  grid-template-rows: 1px, 1px, 1px;
+}
+.imagen-fondo-titulo {
+  grid-column: 1, 4;
+  grid-row: 1, 4;
+  height: 100px;
+}
+.imagen-fondo-titulo {
+  img {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100%;
+  }
+}
+.texto-titulo {
+  color: lightseagreen;
+  grid-column: 2, 3;
+  grid-row: 2, 3;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-family: @font-family-body;
+}
