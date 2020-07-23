@@ -1,7 +1,6 @@
 module.exports = {
   extend: "apostrophe-widgets",
-  label: "Header",
-  contextualOnly: true,
+  label: "Titulo Pagina",
   addFields: [
     {
       name: "titulo",
@@ -11,7 +10,13 @@ module.exports = {
     {
       name: "image",
       label: "image",
-      type: "area",
+      type: "singleton",
+      widgetType: "apostrophe-images",
+      options: {
+        limit: 1,
+        template: "single",
+        size: "one-sixth",
+      },
     },
   ],
 };
