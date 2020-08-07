@@ -2,4 +2,19 @@
 <div>
   {{ apos.singleton(data.page, 'header', 'header', { }) }}
 </div>
+<div class="contenido-pagina-contacto">
+  <form action="" class="formulario-contacto">
+    <input type="text" placeholder="Nombre" />
+    <input type="email" placeholder="Email" />
+    <input type="text" placeholder="Mensaje" class="contenido-formulario" />
+    <div class="boton">Enviar</div>
+  </form>
+  <div class="redes-sociales">
+    {{ apos.singleton(data.page, 'redSocial', 'red-social', { }) }} {{
+    apos.singleton(data.page, 'redSocial', 'red-social', { }) }} {{
+    apos.singleton(data.page, 'redSocial', 'red-social', { }) }} {{
+    apos.singleton(data.page, 'texto', 'apostrophe-rich-text', { }) }}
+    <!--  {{apos.singleton(data.page, 'boton', 'boton',{})}} -->
+  </div>
+</div>
 {%endblock%}
