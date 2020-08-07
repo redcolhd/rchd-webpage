@@ -1,10 +1,8 @@
 <div class="contenedor-red-social">
   <div class="imagen-red-social">
-    {{ apos.singleton(data.widget, 'image', 'apostrophe-images',
-    {size:'one-sixth'}) }}
+    {{ apos.singleton(data.widget, 'image', 'apostrophe-images', {}) }}
   </div>
   <div class="texto-titulo letra-texto">
-    {{ apos.area(data.widget, 'titulo', { widgets: { 'apostrophe-rich-text': {}
-    } }) }}
+    {{ apos.singleton(data.widget, 'titulo', 'apostrophe-rich-text', {}) }}
   </div>
 </div>

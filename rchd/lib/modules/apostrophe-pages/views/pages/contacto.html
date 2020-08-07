@@ -10,11 +10,8 @@
     <div class="boton">Enviar</div>
   </form>
   <div class="redes-sociales">
-    {{ apos.singleton(data.page, 'redSocial', 'red-social', { }) }} {{
-    apos.singleton(data.page, 'redSocial', 'red-social', { }) }} {{
-    apos.singleton(data.page, 'redSocial', 'red-social', { }) }} {{
-    apos.singleton(data.page, 'texto', 'apostrophe-rich-text', { }) }}
-    {{apos.singleton(data.page, 'boton', 'boton',{})}}
+    {{ apos.area(data.page, 'redes', { widgets: { 'red-social': {}, boton:{},
+    'apostrophe-rich-text':{toolbar: [ 'Bold', 'Italic' ]} } }) }}
   </div>
 </div>
 <div>

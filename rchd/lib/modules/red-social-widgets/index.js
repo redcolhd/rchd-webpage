@@ -15,7 +15,7 @@ module.exports = {
     },
     {
       name: "titulo",
-      type: "area",
+      type: "singleton",
       label: "Titulo",
     },
   ],
