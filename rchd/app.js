@@ -25,5 +25,6 @@ var apos = require("apostrophe")({
     "header-widgets": {},
     "red-social-widgets": {},
     "boton-widgets": {},
+    "footerPagina-widgets": {},
   },
 });
