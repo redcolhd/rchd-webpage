@@ -23,6 +23,6 @@ var apos = require("apostrophe")({
       viewsFolderFallback: path.join(__dirname, "views"),
     },
     "header-widgets": {},
-    "red-social": {},
+    "red-social-widgets": {},
   },
 });
