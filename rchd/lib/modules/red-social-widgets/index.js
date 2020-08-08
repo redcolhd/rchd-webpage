@@ -11,13 +11,19 @@ module.exports = {
       options: {
         limit: 1,
         template: "single",
-        size: "one-sixth", 
+        size: "one-sixth",
       },
     },
     {
       name: "titulo",
-      type: "singleton",
+      type: "string",
       label: "Titulo",
+    },
+    {
+      name: "url",
+      type: "url",
+      label: "URL",
+      required: true,
     },
   ],
 };
