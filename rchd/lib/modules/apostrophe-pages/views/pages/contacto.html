@@ -11,7 +11,16 @@
   </form>
   <div class="redes-sociales letra-texto">
     {{ apos.area(data.page, 'redes', { widgets: { 'red-social': {}, boton:{},
-    'apostrophe-rich-text':{toolbar: [ 'Bold', 'Italic' ]} } }) }}
+    'apostrophe-rich-text':{
+      toolbar: [ 'Styles', 'Bold', 'Italic' ],
+      styles: [
+        { name: 'Heading', element: 'h3' },
+        { name: 'Subheading', element: 'h5' },
+        { name: 'Paragraph', element: 'p' }
+      ]
+    } 
+  } 
+}) }}
   </div>
 </div>
 <div>
