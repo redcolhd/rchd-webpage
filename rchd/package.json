@@ -13,7 +13,8 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "apostrophe": "^2.103.1"
+    "apostrophe": "^2.103.1",
+    "apostrophe-forms": "^1.10.0"
   },
   "nodemonConfig": {
     "verbose": true,
