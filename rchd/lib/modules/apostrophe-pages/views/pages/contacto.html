@@ -3,12 +3,17 @@
   {{ apos.singleton(data.page, 'header', 'header', { }) }}
 </div>
 <div class="contenido-pagina-contacto">
-  <form action="" class="formulario-contacto">
+  <!-- <form action="" class="formulario-contacto">
     <input type="text" placeholder="Nombre" />
     <input type="email" placeholder="Email" />
     <input type="text" placeholder="Mensaje" class="contenido-formulario" />
     <div class="boton">Enviar</div>
-  </form>
+  </form> -->
+  {{ apos.area(data.page, 'body', {
+    widgets: {
+      'apostrophe-forms': {}
+    }
+  }) }}
   <div class="redes-sociales letra-texto">
     {{ apos.area(data.page, 'redes', { widgets: { 'red-social': {}, boton:{},
     'apostrophe-rich-text':{
