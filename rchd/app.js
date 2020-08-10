@@ -9,13 +9,12 @@ var apos = require("apostrophe")({
 
   modules: {
     "apostrophe-forms": {
-      // Best practice: set to first or last so that inputs are nested in labels
-      // and easier to style
       optionLabelPosition: "last",
+      classPrefix: "my-form",
     },
-    "apostrophe-forms-widgets": {},
-    // Enable only the field widgets that your application needs to make it
-    // easier for application/website managers.
+    "apostrophe-forms-widgets": {
+      disableBaseStyles: true,
+    },
     "apostrophe-forms-text-field-widgets": {},
     "apostrophe-forms-textarea-field-widgets": {},
     "apostrophe-forms-file-field-widgets": {},
@@ -24,27 +23,12 @@ var apos = require("apostrophe")({
     "apostrophe-forms-checkboxes-field-widgets": {},
     "apostrophe-forms-boolean-field-widgets": {},
     "apostrophe-forms-conditional-widgets": {},
-    // END of field widgets
-    "apostrophe-email": {
-      // See the email tutorial for required configuration.
-      // https://docs.apostrophecms.org/apostrophe/tutorials/howtos/email
-    },
+    "apostrophe-email": {},
     "apostrophe-permissions": {
       construct: function (self, options) {
-        // Required if you want file fields to work on public pages.
         self.addPublic(["edit-attachment"]);
       },
     },
-    // Apostrophe module configuration
-
-    // Note: most configuration occurs in the respective
-    // modules' directories. See lib/apostrophe-assets/index.js for an example.
-
-    // However any modules that are not present by default in Apostrophe must at
-    // least have a minimal configuration here: `moduleName: {}`
-
-    // If a template is not found somewhere else, serve it from the top-level
-    // `views/` folder of the project
 
     "apostrophe-templates": {
       viewsFolderFallback: path.join(__dirname, "views"),
