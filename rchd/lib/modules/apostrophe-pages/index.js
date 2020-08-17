@@ -11,7 +11,6 @@ module.exports = {
       name: "contacto",
       label: "Contacto",
     },
-
     // Add more page types here, but make sure you create a corresponding
     // template in lib/modules/apostrophe-pages/views/pages!
   ],

@@ -5,12 +5,15 @@ module.exports = {
   jQuery: 3,
   stylesheets: [
     {
-      name: 'site'
-    }
+      name: "site",
+    },
   ],
   scripts: [
     {
-      name: 'site'
-    }
-  ]
+      name: "site",
+      name: "p5",
+      name: "p5.sound.min",
+      name: "sketch",
+    },
+  ],
 };
