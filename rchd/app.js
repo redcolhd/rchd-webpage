@@ -37,5 +37,6 @@ var apos = require("apostrophe")({
     "red-social-widgets": {},
     "boton-widgets": {},
     "footerPagina-widgets": {},
+    'two-column-widgets': {}
   },
 });
