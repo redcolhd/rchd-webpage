@@ -38,6 +38,9 @@ var apos = require("apostrophe")({
     "boton-widgets": {},
     "footerPagina-widgets": {},
     'two-column-widgets': {},
-    'convocatorias': {}
+    'convocatorias': {},
+    'convocatorias-widgets': {
+      extend: 'apostrophe-pieces-widgets'
+    }
   },
 });
