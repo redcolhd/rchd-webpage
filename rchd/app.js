@@ -37,10 +37,11 @@ var apos = require("apostrophe")({
     "red-social-widgets": {},
     "boton-widgets": {},
     "footerPagina-widgets": {},
-    'two-column-widgets': {},
-    'convocatorias': {},
-    'convocatorias-widgets': {
-      extend: 'apostrophe-pieces-widgets'
-    }
+    "two-column-widgets": {},
+    convocatorias: {},
+    "convocatorias-widgets": {
+      extend: "apostrophe-pieces-widgets",
+    },
+    "twitter-widgets": {},
   },
 });
