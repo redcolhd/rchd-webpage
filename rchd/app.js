@@ -44,6 +44,9 @@ var apos = require("apostrophe")({
     },
     "twitter-widgets": {},
     miembros: {},
-    actualizacions: {}
+    actualizacions: {},
+    "actualizacions-widgets": {
+      extend: "apostrophe-pieces-widgets"
+    }
   },
 });
