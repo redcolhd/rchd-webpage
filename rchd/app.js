@@ -43,6 +43,7 @@ var apos = require("apostrophe")({
       extend: "apostrophe-pieces-widgets",
     },
     "twitter-widgets": {},
-    miembros: {}
+    miembros: {},
+    actualizacions: {}
   },
 });
