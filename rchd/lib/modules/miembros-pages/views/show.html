@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}{{ data.piece.title }}{% endblock %}
+
+{% block main %}
+<h2>Nombre: {{ data.piece.name }}</h2>
+<h2>{{ data.piece.email }}</h2>
+{% set image = apos.images.first(data.piece.photo) %}
+{% if image %}
+   <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+{% endif %}
+{% endblock %}
