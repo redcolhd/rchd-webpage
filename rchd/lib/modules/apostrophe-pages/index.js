@@ -14,6 +14,10 @@ module.exports = {
     {
       name: "dos-columnas",
       label: "Dos Columnas",
+    },
+    {
+      name: "miembros-page",
+      label: "Miembros"
     }
     // Add more page types here, but make sure you create a corresponding
     // template in lib/modules/apostrophe-pages/views/pages!
