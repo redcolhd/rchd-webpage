@@ -5,6 +5,13 @@ module.exports = {
   pluralLabel: 'Miembros',
   addFields: [
     {
+      name: 'title',
+      label: 'Full Name',
+      type: 'string',
+      required: true,
+      contextual: true
+    },
+    {
       name: 'name',
       label: 'Nombre y apellidos',
       type: 'string',
@@ -157,5 +164,11 @@ module.exports = {
       label: 'Administrativo',
       fields: [ 'slug', 'published', 'tags' ]
     }
-  ]
+  ],
+  construct: function(self, options) {
+    self.beforeSave = function(req, piece, options, callback) {
+      piece.title = piece.name;
+      return callback();
+    }
+  }
 };
