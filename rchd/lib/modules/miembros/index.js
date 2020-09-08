@@ -31,8 +31,13 @@ module.exports = {
     {
       name: 'photo',
       label: 'Foto',
-      type: 'attachment',
-      group: 'images',
+      type: 'singleton',
+      widgetType: 'apostrophe-images',
+      options: {
+        limit: 1,
+        minSize: [ 200, 200 ],
+        aspectRatio: [ 1, 1 ]
+      },
       required: true
     },
     {

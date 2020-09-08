@@ -3,13 +3,13 @@
 
 {% block main %}
 {% for piece in data.pieces %}
-<h3>
- {% set image = apos.images.first(piece.thumbnail) %}
+<div>
+ {% set image = apos.images.first(piece.photo) %}
  {% if image %}
    <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
  {% endif %}
- <a href="{{ piece._url }}">{{ piece.title }}</a>
-</h3>
+ <h3><a href="{{ piece._url }}">{{ piece.title }}</a></h3>
+</div>
 {% endfor %}
   
   
