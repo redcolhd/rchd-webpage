@@ -1,11 +1,28 @@
-{% extends "layout.html" %}
-{% block title %}{{ data.piece.title }}{% endblock %}
-
-{% block main %}
-<h2>Nombre: {{ data.piece.name }}</h2>
-<h2>{{ data.piece.email }}</h2>
-{% set image = apos.images.first(data.piece.photo) %}
-{% if image %}
-   <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
-{% endif %}
+{% extends "layout.html" %} {% block title %}{{ data.piece.title }}{% endblock
+%} {% block main %}
+<div class="headerMiembro">{{data.piece.name}}</div>
+<div class="contenidoMiembro">
+  <div class="contenidoIzquierda">
+    {% set image = apos.images.first(data.piece.photo) %} {% if image %}
+    <img
+      class="imagenMiembro"
+      src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"
+    />
+    {% endif %}
+    <div class="colorAzul">Perfil profesional</div>
+    <div class="textoPerfil">{{data.piece.education}}</div>
+    <div class="textoPerfil">{{data.piece.institutionalMembership}}</div>
+    <div class="botonMiembro">
+      <a href="{{data.piece.socialMedia}}" class="linkMiembro">Contacto</a>
+    </div>
+  </div>
+  <div class="contenidoDerecha">
+    <div class="cuadroGris">
+      <div class="ciculo">Proyectos</div>
+      <div class="ciculo">Intereses generales</div>
+      <div class="ciculo">Intereses HD</div>
+    </div>
+    <div></div>
+  </div>
+</div>
 {% endblock %}
