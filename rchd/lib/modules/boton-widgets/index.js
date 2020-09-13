@@ -7,5 +7,10 @@ module.exports = {
       type: "string",
       label: "Titulo",
     },
+    {
+      name: "pageUrl",
+      type: "string",
+      label: "link",
+    },
   ],
 };
