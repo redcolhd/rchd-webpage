@@ -1,3 +1,4 @@
+/* seccion quienes somos*/
 .gridQuienesSomos {
   padding: 2%;
   display: grid;
@@ -53,4 +54,50 @@
   grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
+}
+
+/* seccion aliados*/
+/* se crea grid para la seccion*/
+.gridAliados {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  padding: 15px;
+}
+.imagenFondoAliados {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.tituloAliados {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  color: @rchdAnaranjado;
+  text-align: center;
+  letter-spacing: 15px;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: @font-family-display;
+  padding: 5%;
+}
+.aliado1 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.aliado2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.aliado3 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
