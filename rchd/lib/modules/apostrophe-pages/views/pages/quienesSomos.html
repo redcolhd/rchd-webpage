@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block main %}
+
+<div class="gridQuienesSomos">
+  <div class="imagenFondo">
+    {{ apos.singleton(data.page, 'imagenFondo', 'apostrophe-images', { limit: 1,
+    size: 'full' }) }}
+  </div>
+  <div class="navQuienesSomos">nav</div>
+  <div class="imagenLogo">
+    {{ apos.singleton(data.page, 'imagenLogo', 'apostrophe-images', { limit: 1,
+    size: 'full' }) }}
+  </div>
+  <div class="tituloQuienesSomos">
+    {{ apos.singleton(data.page, 'textoTitulo', 'apostrophe-rich-text', { }) }}
+  </div>
+  <div class="textoQuienesSomos">
+    {{ apos.singleton(data.page, 'texto', 'apostrophe-rich-text', { }) }}
+  </div>
+  <div class="botonQuienesSomos">
+    {{ apos.singleton(data.page, 'boton', 'boton', { }) }}
+  </div>
+</div>
+{%endblock%}
