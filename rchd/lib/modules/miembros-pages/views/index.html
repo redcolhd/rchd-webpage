@@ -5,6 +5,18 @@
 <div>
   {{ apos.singleton(data.page, 'header', 'header', { }) }}
 </div>
+<ul class="tag-filters">
+  {% for tag in data.piecesFilters.tags %}
+    <li><a href="{{ data.url | build({ tags: tag.value }) }}">{{ tag.label }}</a></li>
+  {% endfor %}
+</ul>
+<br>
+<br>
+<ul class="tag-filters">
+  {% for field in data.piecesFilters.fieldsOfInterest %}
+    <li><a href="{{ data.url | build({ fieldsOfInterest: field.value }) }}">{{ field.label }}</a></li>
+  {% endfor %}
+</ul>
 <div class="miembros-container">
   {% for piece in data.pieces %}
   <div class="miembro-cuadro">
