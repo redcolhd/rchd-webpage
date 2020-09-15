@@ -45,11 +45,12 @@ var apos = require("apostrophe")({
     "twitter-widgets": {},
     miembros: {},
     "miembros-pages": {
-      extend: "apostrophe-pieces-pages"
+      extend: "apostrophe-pieces-pages",
     },
     actualizacions: {},
     "actualizacions-widgets": {
-      extend: "apostrophe-pieces-widgets"
-    }
+      extend: "apostrophe-pieces-widgets",
+    },
+    "menuHome-widgets": {},
   },
 });

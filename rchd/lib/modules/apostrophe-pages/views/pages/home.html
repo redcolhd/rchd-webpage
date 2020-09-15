@@ -1,16 +1,31 @@
-{# This is an example home page template. It inherits and extends a layout
-template that lives in the top-level views/ folder for convenience #} {% extends
-"layout.html" %} {% block main %}
-
-<div class="main-content">
-  <h3>
-    Hello world! {% if not data.user %}
-    <a class="login-link" href="{{ apos.prefix }}/login">Login</a>
-    {% endif %}
-  </h3>
-
-  {{ apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', { toolbar: [
-  'Bold', 'Italic' ] }) }}
+{% extends "layout.html" %} {% block main %}
+<div class="gridHome">
+  <div class="imagenFondoH">
+    {{ apos.singleton(data.page, 'imagenFondo', 'apostrophe-images', { limit: 1,
+    size: 'full' }) }}
+  </div>
+  <div class="imagenLogoRed">
+    {{ apos.singleton(data.page, 'imagenlogoRed', 'apostrophe-images', { limit:
+    1, size: 'full' }) }}
+  </div>
+  <div class="menu">
+    {{ apos.singleton(data.page, 'imagen', 'menuHome', { }) }}
+  </div>
+  <div>
+    {{ apos.singleton(data.page, 'imagen2', 'apostrophe-images', { limit: 1}) }}
+  </div>
+  <div>
+    {{ apos.singleton(data.page, 'imagen3', 'apostrophe-images', { limit: 1}) }}
+  </div>
+  <div>
+    {{ apos.singleton(data.page, 'imagen4', 'apostrophe-images', { limit: 1}) }}
+  </div>
+  <div>
+    {{ apos.singleton(data.page, 'imagen5', 'apostrophe-images', { limit: 1}) }}
+  </div>
+  <div>
+    {{ apos.singleton(data.page, 'imagen6', 'apostrophe-images', { limit: 1}) }}
+  </div>
 </div>
 
 {% endblock %}
