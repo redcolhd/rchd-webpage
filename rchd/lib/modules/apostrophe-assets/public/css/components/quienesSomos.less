@@ -1,9 +1,9 @@
 /* seccion quienes somos*/
 .gridQuienesSomos {
-  padding: 2%;
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2 * (100vw/5) 2 * (100vw/5) (100vw/5);
+  grid-template-rows: repeat(4, 100vh/4);
+  column-gap: 2%;
 }
 .navQuienesSomos {
   grid-column-start: 3;
@@ -19,10 +19,14 @@
   grid-row-end: 5;
 }
 .imagenLogo {
+  margin-left: 2%;
+  height: (100vh/5);
+  width: 70%;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 4;
+  justify-self: end;
 }
 .tituloQuienesSomos {
   grid-column-start: 2;
@@ -35,6 +39,9 @@
   font-size: 40px;
   font-weight: 900;
   font-family: @font-family-display;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .textoQuienesSomos {
   grid-column-start: 2;
@@ -46,6 +53,7 @@
   font-size: 15px;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
