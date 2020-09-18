@@ -40,7 +40,7 @@
   font-weight: 900;
   font-family: @font-family-display;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
 }
 .textoQuienesSomos {
@@ -68,13 +68,12 @@
 /* se crea grid para la seccion*/
 .gridAliados {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr;
-  padding: 15px;
+  grid-template-columns: repeat(3, (100vw/3));
+  grid-template-rows: 100vh/3 2 * 100vh/3;
 }
 .aliado {
   /* se centran las imagenes de los aliados*/
-  align-self: center;
+  align-self: start;
   justify-self: center;
   /* se da tamaño al div que contiene la imagen del aliado*/
   width: 300px;
@@ -100,7 +99,8 @@
   font-size: 40px;
   font-weight: 900;
   font-family: @font-family-display;
-  padding: 5%;
+  justify-self: center;
+  align-self: center;
 }
 .aliado1 {
   grid-row-start: 2;
