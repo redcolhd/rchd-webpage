@@ -2,11 +2,27 @@
 <div class="footer">
   <div class=""></div>
   <div class="textoFooter">
-    PRUEBA DE FOOTER
-    <div class="c-footer__nav">
-      <ul class="tabs">
-        {% for tab in data.home._children %}
-        <li><a href="{{ tab._url }}">{{ tab.title }}</a></li>
+    <div class="footer_nav">
+      <ul class="c-navigation__items">
+        {% for tab in home._children %}
+        <li
+          class="c-navigation__item {% if currentPage and (apos.pages.isAncestorOf(tab, currentPage) or tab._id == currentPage._id) %} c-navigation__item--active {% endif %}"
+        >
+          <a
+            class="o-body c-navigation__link textoFooter"
+            href="{{ tab._url }}"
+          >
+            {{ tab.title }}{% if options.arrows and tab._children.length > 0
+            %}{{ svgs.navArrow() }}{% endif %}
+          </a>
+          {% if tab._children.length > 0 and options.arrows %}
+          <ul class="o-body c-navigation__item__subnav" aria-label="subnav">
+            {% for child in tab._children %}
+            <li><a href="{{ child._url }}">{{ child.title }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
         {% endfor %}
       </ul>
     </div>
