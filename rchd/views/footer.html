@@ -1,0 +1,15 @@
+{% macro render(home, currentPage) %}
+<div class="footer">
+  <div class=""></div>
+  <div class="textoFooter">
+    PRUEBA DE FOOTER
+    <div class="c-footer__nav">
+      <ul class="tabs">
+        {% for tab in data.home._children %}
+        <li><a href="{{ tab._url }}">{{ tab.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endmacro %}

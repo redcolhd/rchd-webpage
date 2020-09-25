@@ -1,6 +1,8 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
 {% extends data.outerLayout %}
 
+{% import 'footer.html' as footer %}
+
 {% block title %}
   {# Create a useful, SEO-friendly title tag based on what we have #}
   {% if data.piece %}
@@ -35,7 +37,5 @@
 {% endblock %}
 
 {% block afterMain %}
-  {#
-    This would be a great place to put a global footer.
-  #}
+{{ footer.render(data.home, data.page) }}
 {% endblock %}

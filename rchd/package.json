@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "apostrophe": "^2.103.1",
-    "apostrophe-forms": "^1.10.0"
+    "apostrophe-forms": "^1.10.0",
+    "helpers": "0.0.6"
   },
   "nodemonConfig": {
     "verbose": true,

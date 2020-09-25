@@ -1,8 +1,6 @@
 {% extends "layout.html" %} {% block main %}
 
-<div>
-  {{ apos.singleton(data.page, 'header', 'header', { }) }}
-</div>
+<div>{{ apos.singleton(data.page, 'header', 'header', { }) }}</div>
 <div class="contenido-pagina-contacto">
   <div class="formulario-contacto">
     {{ apos.area(data.page, 'body', { widgets: { 'apostrophe-forms': {} } }) }}
@@ -13,8 +11,5 @@
     { name: 'Heading', element: 'h3' }, { name: 'Subheading', element: 'h5' }, {
     name: 'Paragraph', element: 'p' } ] } } }) }}
   </div>
-</div>
-<div>
-  {{apos.singleton(data.page,'footerPagina','footerPagina', {})}}
 </div>
 {%endblock%}

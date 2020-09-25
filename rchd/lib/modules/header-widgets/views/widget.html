@@ -1,4 +1,4 @@
-<div class="contenedor-titulo-imagen">
+<div class="contenedor-header">
   <div class="imagen-fondo-titulo">
     {{ apos.singleton(data.widget, 'image', 'apostrophe-image',
     {size:'one-sixth'}) }}
@@ -6,5 +6,42 @@
   <div class="texto-titulo">
     {{ apos.area(data.widget, 'titulo', { widgets: { 'apostrophe-rich-text': {}
     } }) }}
+  </div>
+  <div class="contenedorNav">
+    <!-- ICONO NAV -->
+    <div class="navIcon">
+      <input
+        type="checkbox"
+        id="checkbox4"
+        class="checkbox4 hidden nav_icono"
+      />
+      <label for="checkbox4">
+        <h4>4</h4>
+        <div class="hamburger hamIcon">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+          <span class="bar bar4"></span>
+          <span class="bar bar5"></span>
+        </div>
+      </label>
+    </div>
+    <!-- PESTAÑAS -->
+    <div class="contenedorTabs">
+      <ul class="tabs menuTabs mobile">
+        {% for tab in data.home._children %}
+        <li>
+          <a href="{{ tab._url }}" class="menu__item">{{ tab.title }}</a>
+          {% if tab._children.length %}
+          <!-- <ul>
+            {% for child in tab._children %}
+            <li><a href="{{ child._url }}">{{ child.title }}</a></li>
+            {% endfor %}
+          </ul> -->
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>

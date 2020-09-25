@@ -1,3 +1,5 @@
+var _ = require("@sailshq/lodash");
+
 module.exports = {
   extend: "apostrophe-widgets",
   label: "Titulo Pagina",
