@@ -168,7 +168,7 @@ module.exports = {
     {
       name: 'admin',
       label: 'Administrativo',
-      fields: [ 'slug', 'published', 'tags' ]
+      fields: [ 'slug', 'published', 'centralCommittee', 'tags' ]
     }
   ],
   construct: function(self, options) {
