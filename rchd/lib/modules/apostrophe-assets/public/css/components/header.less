@@ -44,8 +44,58 @@
 ul {
   list-style: none;
 }
-.desktop {
-  display: none;
+
+.navIcon {
+  grid-row: 1;
+  top: 5vh;
+  right: -32vh;
+  height: 9vh;
+  width: 9vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border: solid 2px @rchdGrisClaro;
+  background: black;
+  border-radius: 9px;
+  position: relative;
+  z-index: 20;
+}
+
+.navIcon:hover {
+  box-shadow: 0 0 10px @rchdAzul;
+}
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  top: 0.2vh;
+  height: 9vh;
+  width: 9vh;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  background: rgba(40, 40, 40, 0.2);
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  z-index: 1;
+}
+
+.checkbox:checked {
+  background: @rchdGris;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  visibility: hidden;
+}
+
+.hamburger,
+.navIcon,
+.hidden {
+  cursor: pointer;
 }
 
 .menu_shown .menu__icon span {
@@ -79,7 +129,7 @@ ul {
 }
 
 .menu_shown .mobile.menuTabs {
-  transform: translateX(15vh);
+  transform: translateX(8vh);
   visibility: visible;
 }
 
@@ -105,23 +155,11 @@ ul {
   padding: 5px;
 }
 
-.hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
 .hamburger {
   margin: 0;
   width: 30px;
   height: 30px;
   position: relative;
-  cursor: pointer;
 }
 
 .hamburger .bar {
@@ -178,52 +216,34 @@ ul {
   left: 13.5px;
 }
 
-.checkbox4:checked + label > .hamIcon > .bar1 {
+.checkbox:checked {
+  background: rgba(40, 40, 40, 0.7);
+}
+
+.checkbox:checked + label > .hamIcon > .bar1 {
   top: 13.5px;
   background-color: transparent;
 }
 
-.checkbox4:checked + label > .hamIcon > .bar2 {
+.checkbox:checked + label > .hamIcon > .bar2 {
   left: 0px;
   width: 30px;
   transform: rotate(45deg);
 }
 
-.checkbox4:checked + label > .hamIcon > .bar3 {
+.checkbox:checked + label > .hamIcon > .bar3 {
   left: 0;
   width: 30px;
   transform: rotate(-45deg);
 }
 
-.checkbox4:checked + label > .hamIcon > .bar4 {
+.checkbox:checked + label > .hamIcon > .bar4 {
   background-color: transparent;
 }
 
-.checkbox4:checked + label > .hamIcon > .bar5 {
+.checkbox:checked + label > .hamIcon > .bar5 {
   bottom: 13.5px;
   background-color: transparent;
-}
-
-.navIcon {
-  grid-row: 1;
-  grid-column: 1;
-  display: flex;
-  top: 5vh;
-  right: -32vh;
-  align-content: center;
-  justify-content: center;
-  border: solid 2px @rchdGrisClaro;
-  background: black;
-  border-radius: 10px;
-  margin-left: 85%;
-  height: 130%;
-  width: 70px;
-  position: relative;
-  z-index: 20;
-}
-
-.navIcon:hover {
-  box-shadow: 0 0 10px @rchdAzul;
 }
 
 .contenedorTabs {
