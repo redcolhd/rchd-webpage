@@ -2,6 +2,7 @@
 {% extends data.outerLayout %}
 
 {% import 'footer.html' as footer %}
+{% import 'nav.html' as nav %}
 
 {% block title %}
   {# Create a useful, SEO-friendly title tag based on what we have #}
@@ -22,10 +23,7 @@
 {% endblock %}
 
 {% block beforeMain %}
-  {#
-    We recommend you use the beforeMain block for global page components
-    like headers or navigation.
-  #}
+{{ nav.render(data.home, data.page) }}
 {% endblock %}
 
 {% block main %}

@@ -4,7 +4,7 @@
   grid-template-rows: repeat(3, 1fr);
   max-width: 100vw;
   width: 100%;
-  height: 20vh;
+  height: 19vh;
 
   overflow: hidden;
 }
@@ -16,7 +16,7 @@
   grid-row-end: 3;
 
   img {
-    height: 20vh !important;
+    height: 19vh !important;
     width: 100vw !important;
   }
 }
@@ -32,13 +32,13 @@
   font-weight: 900;
   font-family: @font-family-display;
 }
-// ESTILOS DEL NAV
+
 .contenedorNav {
-  grid-column: 3;
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  position: fixed;
+  z-index: 20;
+  right: 10%;
+  top: 5%;
+  height: 50px;
 }
 
 ul {
@@ -63,21 +63,22 @@ ul {
 }
 
 .mobile.menuTabs {
-  padding-top: 15%;
-  position: absolute;
-  top: 0;
-  width: 18%;
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.904);
+  flex-direction: column;
+  margin-top: -110%;
   z-index: 10;
+  width: 300%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.904);
   transition: all 0.7s ease-in-out;
-  transform: translateX(155%);
+  transform: translateX(100%);
   visibility: hidden;
 }
 
 .menu_shown .mobile.menuTabs {
-  transform: translateX(-55%);
+  transform: translateX(-8%);
   visibility: visible;
 }
 
@@ -213,6 +214,7 @@ ul {
   margin-left: 85%;
   height: 130%;
   width: 70px;
+  position: relative;
   z-index: 20;
 }
 
