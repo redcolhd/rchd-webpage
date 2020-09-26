@@ -15,22 +15,19 @@
     </label>
   </div>
   <!-- PESTAÑAS -->
-
-  <div class="contenedorTabs">
-    <ul class="tabs menuTabs mobile">
-      {% for tab in home._children %}
-      <li>
-        <a href="{{ tab._url }}" class="menu__item">{{ tab.title }}</a>
-        {% if tab._children.length %}
-        <!-- <ul>
+  <ul class="tabs menuTabs mobile">
+    {% for tab in home._children %}
+    <li>
+      <a href="{{ tab._url }}" class="menu__item">{{ tab.title }}</a>
+      {% if tab._children.length %}
+      <!-- <ul>
             {% for child in tab._children %}
             <li><a href="{{ child._url }}">{{ child.title }}</a></li>
             {% endfor %}
           </ul> -->
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 {% endmacro %}
