@@ -6,17 +6,27 @@
   {{ apos.singleton(data.page, 'header', 'header', { }) }}
 </div>
 
+<div class="miembros-container">
+  {% for piece in data.pieces %}
+    {% if piece.centralCommittee %}
+    <div class="miembro-cuadro">
+      {% set image = apos.images.first(piece.photo) %}
+      {% if image %}
+      <div class="miembro-cuadro-img">
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+      </div>
+    </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+</div>
+
 <ul class="tag-filters">
   {% for field in data.piecesFilters.fieldsOfInterest %}
     <li><a href="{{ data.url | build({ fieldsOfInterest: field.value }) }}">{{ field.label }}</a></li>
   {% endfor %}
 </ul>
-
-<select name="tags" id="tags">
-  {% for field in data.piecesFilters.fieldsOfInterest %}
-  <option value="{{field.value}}"><a href="{{ data.url | build({ fieldsOfInterest: field.value }) }}">{{ field.label }}</a></option>
-  {% endfor %}
-</select>
 
 <div class="miembros-container">
   {% for piece in data.pieces %}

@@ -48,6 +48,12 @@ module.exports = {
       required: true
     },
     {
+      name: 'centralCommittee',
+      label: '¿Hace parte del Comité Central?',
+      type: 'boolean',
+      required: true
+    },
+    {
       name: 'education',
       label: 'Titulo profesional o grado académico',
       type: 'string',
