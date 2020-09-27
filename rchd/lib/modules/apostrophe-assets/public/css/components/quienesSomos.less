@@ -78,9 +78,11 @@
   /* se da tamaño al div que contiene la imagen del aliado*/
   width: 300px;
   height: 300px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 .imagenFondoAliados {
   grid-row-start: 1;
@@ -119,4 +121,44 @@
   grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 4;
+}
+
+.aliado-imagen {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.aliado-overlay {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 10;
+}
+
+.aliado-nombre {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-family: @font-family-display;
+  font-size: 30px;
+  display: none;
+  text-align: center;
+  color: white;
+  z-index: 15;
+}
+
+.aliado:hover {
+  .aliado-overlay {
+    display: block;
+  }
+
+  .aliado-nombre {
+    display: block;
+  }
 }
