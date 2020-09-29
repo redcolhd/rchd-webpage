@@ -28,38 +28,11 @@
     {{ apos.singleton(data.page, 'textoTituloAliados', 'apostrophe-rich-text', {
     }) }}
   </div>
-  <div class="aliado1 aliado">
-    <div class="aliado-imagen">
-      {{ apos.singleton(data.page, 'aliado1', 'apostrophe-images', { limit: 1,
-        size: 'full' }) }}
-    </div>
-    <div class="aliado-overlay"></div>
-    <div class="aliado-nombre">
-      {{ apos.singleton(data.page, 'textoTituloAliados', 'apostrophe-rich-text', {
-      }) }}
-    </div>
-  </div>
-  <div class="aliado2 aliado">
-    <div class="aliado-imagen">
-      {{ apos.singleton(data.page, 'aliado1', 'apostrophe-images', { limit: 1,
-        size: 'full' }) }}
-    </div>
-    <div class="aliado-overlay"></div>
-    <div class="aliado-nombre">
-      {{ apos.singleton(data.page, 'textoTituloAliados', 'apostrophe-rich-text', {
-      }) }}
-    </div>
-  </div>
-  <div class="aliado3 aliado">
-    <div class="aliado-imagen">
-      {{ apos.singleton(data.page, 'aliado1', 'apostrophe-images', { limit: 1,
-        size: 'full' }) }}
-    </div>
-    <div class="aliado-overlay"></div>
-    <div class="aliado-nombre">
-      {{ apos.singleton(data.page, 'textoTituloAliados', 'apostrophe-rich-text', {
-      }) }}
-    </div>
+  <div class="aliado1">
+    {{ apos.area(data.page, 'filaAliados', { widgets: {
+      'aliados': {}
+    } }) }}
   </div>
 </div>
+
 {%endblock%}
