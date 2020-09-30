@@ -1,10 +1,12 @@
 <div class="aliado">
     <div class="aliado-imagen">
-      {{ apos.singleton(data.widget, 'aliado1', 'apostrophe-images', { limit: 1,
-        size: 'full' }) }}
+      {% set image = apos.images.first(data.widget.image) %}
+      {% if image %}
+      <img src="{{ apos.attachments.url(image, { size: 'one-third' }) }}" alt="prueba">
+      {% endif %}
     </div>
     <div class="aliado-overlay"></div>
     <div class="aliado-nombre">
       {{ data.widget.titulo }}
     </div>
-  </div>
+</div>
