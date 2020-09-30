@@ -52,6 +52,8 @@ var apos = require("apostrophe")({
       extend: "apostrophe-pieces-widgets",
     },
     "menuHome-widgets": {},
+    "aliados-widgets": {},
+    "aliado-info-widgets": {}
   },
   "apostrophe-pages": {
     filters: {
@@ -65,5 +67,5 @@ var apos = require("apostrophe")({
       children: true,
     },
     // other apostrophe-pages options like `types` ...
-  },
+  }
 });
