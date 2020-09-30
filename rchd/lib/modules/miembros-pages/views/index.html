@@ -1,52 +1,53 @@
-{% extends "layout.html" %}
-{% block title %}{{ data.page.title }}{% endblock %}
-
+{% extends "layout.html" %} {% block title %}{{ data.page.title }}{% endblock %}
 {% block main %}
-<div>
-  {{ apos.singleton(data.page, 'header', 'header', { }) }}
-</div>
-
-<div class="comite-container">
-  {% for piece in data.pieces %}
-    {% if piece.centralCommittee %}
-    <div class="miembro-cuadro">
-      {% set image = apos.images.first(piece.photo) %}
-      {% if image %}
+<div class="committee-section">
+  <div>{{ apos.singleton(data.page, 'header', 'header', { }) }}</div>
+  <div class="comite-container">
+    {% for piece in data.pieces %} {% if piece.centralCommittee %}
+    <div class="miembro-cuadro centrar-cuadro">
+      {% set image = apos.images.first(piece.photo) %} {% if image %}
       <div class="miembro-cuadro-img">
         <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
       </div>
+      <a href="{{ piece._url }}" class="nombres-comite">{{ piece.title }}</a>
     </div>
+    {% endif %} {% endif %} {% endfor %}
+  </div>
+</div>
+
+<div class="members-section">
+  <div>{{ apos.singleton(data.page, 'header2', 'header', { }) }}</div>
+
+  <ul class="tag-filters">
+    {% for field in data.piecesFilters.fieldsOfInterest %}
+    <li>
+      <a href="{{ data.url | build({ fieldsOfInterest: field.value }) }}"
+        >{{ field.label }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="miembros-container">
+    {% for piece in data.pieces %}
+    <div class="miembro-cuadro">
+      {% set image = apos.images.first(piece.photo) %} {% if image %}
+      <div class="miembro-cuadro-img">
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+      </div>
       {% endif %}
-    {% endif %}
-  {% endfor %}
-  
+      <div class="miembro-cuadro-overlay"></div>
+      <div class="miembro-cuadro-nombre">
+        <a href="{{ piece._url }}">{{ piece.title }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
-<ul class="tag-filters">
-  {% for field in data.piecesFilters.fieldsOfInterest %}
-    <li><a href="{{ data.url | build({ fieldsOfInterest: field.value }) }}">{{ field.label }}</a></li>
-  {% endfor %}
-</ul>
-
-<div class="miembros-container">
-  {% for piece in data.pieces %}
-  <div class="miembro-cuadro">
-  {% set image = apos.images.first(piece.photo) %}
-  {% if image %}
-  <div class="miembro-cuadro-img">
-    <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
-  </div>
-  {% endif %}
-  <div class="miembro-cuadro-overlay"></div>
-  <div class="miembro-cuadro-nombre"><a href="{{ piece._url }}">{{ piece.title }}</a></div>
-  </div>
-  {% endfor %}
-</div>
-
-  {# YES, YOU NEED PAGINATION. You could set the `perPage` option to a large
-     number, but eventually you will have performance issues. However, also
-     see the discussion of "Load More" and infinite scroll solutions later in this
-     tutorial. #}
-  {% import 'apostrophe-pager:macros.html' as pager with context %}
-  {{ pager.render({ page: data.currentPage, total: data.totalPages }, data.url) }}
-{% endblock %}
+{# YES, YOU NEED PAGINATION. You could set the `perPage` option to a large
+number, but eventually you will have performance issues. However, also see the
+discussion of "Load More" and infinite scroll solutions later in this tutorial.
+#} {% import 'apostrophe-pager:macros.html' as pager with context %} {{
+pager.render({ page: data.currentPage, total: data.totalPages }, data.url) }} {%
+endblock %}
