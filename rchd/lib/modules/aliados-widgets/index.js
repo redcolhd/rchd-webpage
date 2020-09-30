@@ -9,6 +9,11 @@ module.exports = {
       label: 'Left Area',
     },
     {
+      name: 'areaMiddle',
+      type: 'area',
+      label: 'Middle Area'
+    },
+    {
       name: 'areaRight',
       type: 'area',
       label: 'Right Area',
