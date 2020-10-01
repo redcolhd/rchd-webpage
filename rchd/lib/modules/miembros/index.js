@@ -116,37 +116,6 @@ module.exports = {
           value: 'prueba3'
         }
       ]
-    },
-    {
-      name: 'projectName',
-      label: 'Nombre del proyecto',
-      type: 'string',
-      required: false
-    },
-    {
-      name: 'projectAuthors',
-      label: 'Autores',
-      type: 'string',
-      required: true
-    },
-    {
-      name: 'projectUrl',
-      label: 'Link contacto',
-      type: 'string',
-      required: false
-    },
-    {
-      name: 'projectImage',
-      label: 'Imagen del proyecto',
-      type: 'attachment',
-      group: 'images',
-      required: true
-    },
-    {
-      name: 'projectDescription',
-      label: 'Descripción',
-      type: 'string',
-      required: true
     }
   ],
   arrangeFields: [

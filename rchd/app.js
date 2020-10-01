@@ -53,7 +53,8 @@ var apos = require("apostrophe")({
     },
     "menuHome-widgets": {},
     "aliados-widgets": {},
-    "aliado-info-widgets": {}
+    "aliado-info-widgets": {},
+    "projects": {}
   },
   "apostrophe-pages": {
     filters: {
