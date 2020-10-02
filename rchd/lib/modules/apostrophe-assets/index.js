@@ -8,12 +8,5 @@ module.exports = {
       name: "site",
     },
   ],
-  scripts: [
-    {
-      name: "site",
-      name: "p5",
-      name: "p5.sound.min",
-      name: "sketch",
-    },
-  ],
+  scripts: [{ name: "site" }, { name: "nav" }],
 };
