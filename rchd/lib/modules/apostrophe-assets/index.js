@@ -8,5 +8,9 @@ module.exports = {
       name: "site",
     },
   ],
-  scripts: [{ name: "site" }, { name: "nav" }],
+  scripts: [
+    { name: "site" },
+    { name: "modules/nav" },
+    { name: "modules/miembro" },
+  ],
 };
