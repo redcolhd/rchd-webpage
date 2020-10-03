@@ -1,21 +1,20 @@
 .contenido-pagina-contacto {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 60vw 40vw;
   align-items: center;
 }
 
 .formulario-contacto {
-  width: 60%;
+  grid-column: 1;
   padding: 5%;
   padding-left: 7%;
 }
 
 .redes-sociales {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 5%;
+  grid-column: 2;
+  display: grid;
+  width: 40vw !important;
+  margin-top: -7vh;
 }
 
 .letra-texto {
