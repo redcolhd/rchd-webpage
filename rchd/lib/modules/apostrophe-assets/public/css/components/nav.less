@@ -2,8 +2,18 @@
   display: grid;
   grid-template-rows: 7vh 93vh;
   position: fixed;
-  z-index: 20;
-  right: 3vh;
+  width: 7.5vw;
+  right: 3vw;
+}
+
+.indexNav {
+  z-index: 0;
+  transition: z-index 0.5s step-end;
+}
+
+.indexModified {
+  z-index: 50;
+  transition: z-index 0.5s step-start;
 }
 
 ul {
@@ -13,7 +23,6 @@ ul {
 .navIcon {
   grid-row: 1;
   top: 5vh;
-  right: -32vh;
   height: 9vh;
   width: 9vh;
   display: flex;
@@ -94,7 +103,7 @@ ul {
 }
 
 .menu_shown .mobile.menuTabs {
-  transform: translateX(8vh);
+  transform: translateX(-25vh);
   visibility: visible;
 }
 
