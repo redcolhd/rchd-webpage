@@ -5,9 +5,13 @@
   font-family: @font-family-display;
   font-size: 40px;
   font-weight: 900;
-  padding: 5%;
+  display: flex;
+  align-items: center;
+  height: 18vh !important;
   background-color: black;
+  text-indent: 5vw;
 }
+
 .contenidoMiembro {
   display: flex;
   flex-direction: row;
@@ -48,6 +52,7 @@
   color: black;
   font-family: @font-family-body;
   border: none;
+  margin-bottom: 3vh;
 }
 
 .linkMiembro {
@@ -56,11 +61,13 @@
 }
 .contenidoDerecha {
   width: 70%;
+  display: grid;
+  grid-template-rows: 20vh 1fr;
 }
-.cuadroGris {
+.navPanelMiembro {
   width: 100%;
   background-color: @rchdGrisFormuario;
-  height: 150px;
+  height: 20vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -85,4 +92,23 @@
 .circuloMiembro:hover {
   cursor: pointer;
   box-shadow: 3px 3px 20px 5px rgb(243, 237, 225);
+}
+
+.espacioPanelesMiembro {
+  background-color: @rchdGrisClaro;
+  font-family: @font-family-body;
+  font-size: 15px;
+  height: 100%;
+}
+
+.panelMiembro {
+  margin: 2%;
+}
+
+.panelVisible {
+  display: block;
+}
+
+.panelOculto {
+  display: none;
 }

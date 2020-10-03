@@ -17,12 +17,22 @@
     </div>
   </div>
   <div class="contenidoDerecha">
-    <div class="cuadroGris">
-      <div class="circuloMiembro">Proyectos</div>
-      <div class="circuloMiembro">Intereses generales</div>
-      <div class="circuloMiembro">Intereses HD</div>
+    <div class="navPanelMiembro">
+      <div class="circuloMiembro proyectosButton">Proyectos</div>
+      <div class="circuloMiembro interesesGRButton">Intereses generales</div>
+      <div class="circuloMiembro interesesHDButton">Intereses HD</div>
     </div>
-    <div></div>
+    <div>
+      <div class="espacioPanelesMiembro">
+        <div class="panelMiembro miembroProyectos">{{data.piece.title}}</div>
+        <div class="panelMiembro miembroInteresesGR panelOculto">
+          {{data.piece.education}}
+        </div>
+        <div class="panelMiembro miembroInteresesHD panelOculto">
+          {{data.piece.email}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
