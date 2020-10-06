@@ -1,7 +1,20 @@
-$(function() {
-  // Start with your project-level client-side javascript here.
-  // JQuery and lodash (_) are both included with Apostrophe, so no need to
-  // worry about including them on your own.
-  
-  console.log('Hello world.');
+$(document).ready(function () {
+  console.log("Esta funcionando");
+  $(".tag-filters li:has(ul)").click(function (e) {
+    e.preventDefault();
+
+    if ($(this).hasClass("activado")) {
+      $(this).removeClass("activado");
+      $(this).children("ul").slideUp();
+    } else {
+      $(".tag-filters li ul").slideUp();
+      $(".tag-filters li ul").removeClass("activado");
+      $(this).addClass("activado");
+      $(this).children("ul").slideDown();
+      $(this).children("ul").addClass("activadoMenu");
+    }
+  });
+  $(".tag-filters li ul li a").click(function () {
+    window.location.href = $(this).attr("href");
+  });
 });

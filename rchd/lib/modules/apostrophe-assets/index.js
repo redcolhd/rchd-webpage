@@ -12,5 +12,6 @@ module.exports = {
     { name: "site" },
     { name: "modules/nav" },
     { name: "modules/miembro" },
+    { name: "modules/busqueda" },
   ],
 };
