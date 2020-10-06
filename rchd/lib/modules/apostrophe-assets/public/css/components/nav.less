@@ -7,7 +7,7 @@
 }
 
 .indexNav {
-  z-index: 0;
+  z-index: 10;
   transition: z-index 0.5s step-end;
 }
 
@@ -23,8 +23,8 @@ ul {
 .navIcon {
   grid-row: 1;
   top: 5vh;
-  height: 9vh;
-  width: 9vh;
+  height: 60px;
+  width: 60px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -43,8 +43,8 @@ ul {
   position: absolute;
   overflow: hidden;
   top: 0.2vh;
-  height: 9vh;
-  width: 9vh;
+  height: 1vh;
+  width: 1vh;
   margin: -1px;
   padding: 0;
   border: 0;
@@ -94,16 +94,16 @@ ul {
   text-align: center;
   flex-direction: column;
   z-index: 10;
-  width: 40vh;
+  width: 17vw;
   min-height: 100vh;
   top: 0;
   background: rgba(0, 0, 0, 0.904);
   transition: all 0.7s ease-in-out;
-  transform: translateX(60vh);
+  transform: translateX(7vw);
 }
 
 .menu_shown .mobile.menuTabs {
-  transform: translateX(-25vh);
+  transform: translateX(-10vw);
   visibility: visible;
 }
 
@@ -119,6 +119,13 @@ ul {
   color: white;
   font-size: 20px;
   font-family: @font-family-display;
+}
+
+.itemHomeNav {
+  color: @rchdAzul;
+  letter-spacing: 7px;
+  font-weight: 700;
+  font-size: 21px;
 }
 
 .mobile .menu__item:hover {
