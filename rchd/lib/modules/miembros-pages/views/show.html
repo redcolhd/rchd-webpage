@@ -26,10 +26,14 @@
       <div class="espacioPanelesMiembro">
         <div class="panelMiembro miembroProyectos">{{data.piece.title}}</div>
         <div class="panelMiembro miembroInteresesGR panelOculto">
-          {{data.piece.education}}
+          {% for interest in data.piece.fieldsOfInterest %}
+          <div>{{interest}}</div>
+          {% endfor %}
         </div>
         <div class="panelMiembro miembroInteresesHD panelOculto">
-          {{data.piece.email}}
+          {% for interest in data.piece.fieldsOfInterest %}
+          <div>{{interest}}</div>
+          {% endfor %}
         </div>
       </div>
     </div>
