@@ -52,7 +52,10 @@ var apos = require("apostrophe")({
       extend: "apostrophe-pieces-widgets",
     },
     "menuHome-widgets": {},
-    "aliados-widgets": {},
+    "aliados": {},
+    "aliados-widgets": {
+      extend: 'apostrophe-pieces-widgets'
+    },
     "aliado-info-widgets": {},
     "projects": {}
   },
