@@ -13,5 +13,7 @@ module.exports = {
     { name: "modules/nav" },
     { name: "modules/miembro" },
     { name: "modules/busqueda" },
+    { name: "p5Gif/p5" },
+    { name: "p5Gif/sketch" },
   ],
 };

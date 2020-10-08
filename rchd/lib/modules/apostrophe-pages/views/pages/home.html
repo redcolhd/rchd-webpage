@@ -1,9 +1,6 @@
 {% extends "layout.html" %} {% block beforeMain %}
 <div class="gridHome">
-  <div class="imagenFondoH">
-    {{ apos.singleton(data.page, 'imagenFondo', 'apostrophe-images', { limit: 1,
-    size: 'full' }) }}
-  </div>
+  <div class="imagenFondoH" id="imagenFondoH"></div>
   <div class="imagenLogoRed">
     {{ apos.singleton(data.page, 'imagenlogoRed', 'apostrophe-images', { limit:
     1, size: 'full' }) }}

@@ -1,4 +1,4 @@
-let totalParticles = 5000;
+/* let totalParticles = 5000;
 let v;
 let angle = 0;
 let particles = [];
@@ -29,3 +29,4 @@ function makeParticles() {
     particles.push(v);
   }
 }
+ */
