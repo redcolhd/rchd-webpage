@@ -1,10 +1,7 @@
 {% extends "layout.html" %} {% block main %}
 
 <div class="gridQuienesSomos">
-  <div class="imagenFondo">
-    {{ apos.singleton(data.page, 'imagenFondo', 'apostrophe-images', { limit: 1,
-    size: 'full' }) }}
-  </div>
+  <div class="imagenFondo" id="imagenFondoQS"></div>
   <div class="navQuienesSomos">nav</div>
   <div class="imagenLogo">
     {{ apos.singleton(data.page, 'imagenLogo', 'apostrophe-images', { limit: 1,
@@ -29,9 +26,7 @@
     }) }}
   </div>
   <div class="aliado1">
-    {{ apos.area(data.page, 'filaAliados', { widgets: {
-      'aliados': {}
-    } }) }}
+    {{ apos.area(data.page, 'filaAliados', { widgets: { 'aliados': {} } }) }}
   </div>
 </div>
 

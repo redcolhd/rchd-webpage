@@ -1,62 +1,70 @@
 {% extends "layout.html" %} {% block title %}{{ data.page.title }}{% endblock %}
 {% block main %}
-<div class="committee-section">
-  <div>{{ apos.singleton(data.page, 'header', 'header', { }) }}</div>
-  <div class="contenedor-barra-comite">
-    <!-- barra de busqueda por tags -->
-    <div class="contenedor-busqqueda-tag">
-      <div class="contenedor-busqueda">
-        <ul class="tag-filters">
-          <li>
-            <a href="#" class="opcionCategorias">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1.5em"
-                height="1.5em"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M15 12a1 1 0 1 0 1-1a1 1 0 0 0-1 1zm6.71-.71l-5-5A1 1 0 0 0 16 6H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h11a1 1 0 0 0 .71-.29l5-5a1 1 0 0 0 0-1.42zM15.59 16H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h10.59l4 4z"
-                  fill="#626262"
-                />
-              </svg>
-              categorias
+<div class="comite-base-seccion">
+  <div class="imagenFondoMS" id="imagenFondoMS"></div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1.5em"
-                height="1.5em"
-                viewBox="0 0 20 20"
-              >
-                <path d="M5 6l5 5l5-5l2 1l-7 7l-7-7z" fill="#626262" />
-              </svg>
-            </a>
-            <ul>
-              {% for field in data.piecesFilters.fieldsOfInterest %}
-              <li>
-                <a
-                  class="opcion"
-                  href="{{ data.url | build({ fieldsOfInterest: field.value }) }}"
-                  >{{ field.label }}</a
+  <div class="committee-section">
+    <div>{{ apos.singleton(data.page, 'header', 'header', { }) }}</div>
+    <div class="contenedor-barra-comite">
+      <!-- barra de busqueda por tags -->
+      <div class="contenedor-busqqueda-tag">
+        <div class="contenedor-busqueda">
+          <ul class="tag-filters">
+            <li>
+              <a href="#" class="opcionCategorias">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.5em"
+                  height="1.5em"
+                  viewBox="0 0 24 24"
                 >
-              </li>
-              {% endfor %}
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Fin barra de busqueda -->
-    <div class="comite-container">
-      {% for piece in data.pieces %} {% if piece.centralCommittee %}
-      <div class="miembro-cuadro centrar-cuadro">
-        {% set image = apos.images.first(piece.photo) %} {% if image %}
-        <div class="miembro-cuadro-img">
-          <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+                  <path
+                    d="M15 12a1 1 0 1 0 1-1a1 1 0 0 0-1 1zm6.71-.71l-5-5A1 1 0 0 0 16 6H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h11a1 1 0 0 0 .71-.29l5-5a1 1 0 0 0 0-1.42zM15.59 16H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h10.59l4 4z"
+                    fill="#626262"
+                  />
+                </svg>
+                categorias
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.5em"
+                  height="1.5em"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M5 6l5 5l5-5l2 1l-7 7l-7-7z" fill="#626262" />
+                </svg>
+              </a>
+              <ul>
+                {% for field in data.piecesFilters.fieldsOfInterest %}
+                <li>
+                  <a
+                    class="opcion"
+                    href="{{ data.url | build({ fieldsOfInterest: field.value }) }}"
+                    >{{ field.label }}</a
+                  >
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
         </div>
-        <a href="{{ piece._url }}" class="nombres-comite">{{ piece.title }}</a>
       </div>
-      {% endif %} {% endif %} {% endfor %}
+      <!-- Fin barra de busqueda -->
+      <div class="comite-container">
+        {% for piece in data.pieces %} {% if piece.centralCommittee %}
+        <div class="miembro-cuadro centrar-cuadro">
+          {% set image = apos.images.first(piece.photo) %} {% if image %}
+          <div class="miembro-cuadro-img">
+            <img
+              src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"
+            />
+          </div>
+          <a href="{{ piece._url }}" class="nombres-comite"
+            >{{ piece.title }}</a
+          >
+        </div>
+        {% endif %} {% endif %} {% endfor %}
+      </div>
     </div>
   </div>
 </div>
