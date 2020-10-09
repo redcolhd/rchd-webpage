@@ -5,25 +5,26 @@ let particles = [];
 let mySketch;
 let divfondo;
 let urlactual = window.location.href;
+let domain = "http://localhost:3000/";
 
 console.log(urlactual);
 function setup() {
-  if (urlactual == "http://localhost:3000/") {
+  if (urlactual == domain) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoH");
   }
-  if (urlactual == "http://localhost:3000/quienes-somos") {
+  if (urlactual == `${domain}quienes-somos`) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoQS");
   }
-  if (urlactual == "http://localhost:3000/miembros") {
+  if (urlactual == `${domain}miembros`) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoMS");
   }
   if (
-    urlactual == "http://localhost:3000/actualizaciones" ||
-    urlactual == "http://localhost:3000/contacto" ||
-    urlactual == "http://localhost:3000/convocatorias"
+    urlactual == `${domain}actualizaciones` ||
+    urlactual == `${domain}contacto` ||
+    urlactual == `${domain}convocatorias`
   ) {
     mySketch = createCanvas(screen.width, screen.height * 0.2, WEBGL);
     mySketch.parent("imagenFondoHeader");
