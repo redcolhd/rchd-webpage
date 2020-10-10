@@ -54,16 +54,18 @@
       <!-- Fin barra de busqueda -->
       <div class="comite-container">
         {% for piece in data.pieces %} {% if piece.centralCommittee %}
-        <div class="miembro-cuadro centrar-cuadro">
+        <div class="miembro-cuadro-comite centrar-cuadro">
           {% set image = apos.images.first(piece.photo) %} {% if image %}
           <div class="miembro-cuadro-img">
             <img
               src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"
             />
           </div>
-          <a href="{{ piece._url }}" class="nombres-comite"
-            >{{ piece.title }}</a
-          >
+          <div class="nombre-miembro">
+            <a href="{{ piece._url }}" class="nombres-comite"
+              >{{ piece.title }}</a
+            >
+          </div>
         </div>
         {% endif %} {% endif %} {% endfor %}
       </div>
