@@ -13,11 +13,12 @@
   font-family: @font-family-display;
   a {
     text-decoration: none;
-    color: black;
+    color: white;
+    text-align: center;
   }
 }
 .contenedor-busqueda {
-  width: 210px;
+  width: 250px;
   min-width: 150px;
   height: auto;
 }
@@ -30,22 +31,42 @@
   li a {
     display: block;
     padding: 5px;
-    background: @rchdGrisFormuario;
+    background: black;
   }
 
   li a:hover {
     background: @rchdAzul;
+    color: black;
+    path {
+      fill: black;
+    }
   }
   ul li a {
-    background: @rchdGrisFormuario;
+    background: black;
   }
 }
 
 .tag-filters {
   .activado > a {
     background: @rchdAzul;
+    color: black;
+  }
+  .activado {
+    path {
+      fill: black;
+    }
   }
 }
-svg {
-  padding-top: 2px;
+.opcionCategorias {
+  border: 1px solid white;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-justify: center;
+  font-weight: bold;
+}
+
+.labelCategotias {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
