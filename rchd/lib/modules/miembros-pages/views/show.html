@@ -1,6 +1,6 @@
 {% extends "layout.html" %} {% block title %}{{ data.piece.title }}{% endblock
 %} {% block main %}
-<div class="headerMiembro">{{data.piece.name}}</div>
+<div class="headerMiembro" id="sinGif">{{data.piece.name}}</div>
 <div class="contenidoMiembro">
   <div class="contenidoIzquierda">
     {% set image = apos.images.first(data.piece.photo) %} {% if image %}
