@@ -24,15 +24,17 @@
     </div>
     <div>
       <div class="espacioPanelesMiembro">
-        <div class="panelMiembro miembroProyectos">{{data.piece.title}}</div>
+        <div class="panelMiembro miembroProyectos">
+          <div class="elementoPanelM">{{data.piece.title}}</div>
+        </div>
         <div class="panelMiembro miembroInteresesGR panelOculto">
           {% for interest in data.piece.fieldsOfInterest %}
-          <div>{{interest}}</div>
+          <div class="elementoPanelM">{{interest}}</div>
           {% endfor %}
         </div>
         <div class="panelMiembro miembroInteresesHD panelOculto">
           {% for interest in data.piece.fieldsOfInterest %}
-          <div>{{interest}}</div>
+          <div class="elementoPanelM">{{interest}}</div>
           {% endfor %}
         </div>
       </div>
