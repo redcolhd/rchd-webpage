@@ -52,8 +52,15 @@ function draw() {
 function makeParticles() {
   for (let i = 0; i < totalParticles; i++) {
     v = p5.Vector.random3D();
-
-    v.mult(6000);
+    if (
+      urlactual == `${domain}actualizaciones` ||
+      urlactual == `${domain}contacto` ||
+      urlactual == `${domain}convocatorias`
+    ) {
+      v.mult(1500);
+    } else {
+      v.mult(6000);
+    }
 
     particles.push(v);
   }
