@@ -28,9 +28,7 @@ function setup() {
   ) {
     mySketch = createCanvas(screen.width, screen.height * 0.2, WEBGL);
     mySketch.parent("imagenFondoHeader");
-  }
-
-  if (urlactual.includes("/miembros/") == true) {
+  } else {
     mySketch = createCanvas(0, 0, WEBGL);
     mySketch.parent("sinGif");
   }
