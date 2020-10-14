@@ -25,7 +25,11 @@
     <div>
       <div class="espacioPanelesMiembro">
         <div class="panelMiembro miembroProyectos">
-          <div class="elementoPanelM">{{data.piece.title}}</div>
+          {% if data.piece._projects %}
+          {% for project in data.piece._projects %}
+          <div class="elementoPanelM"><a href="{{ project.projectUrl }}">{{project.title}}</a></div>
+          {% endfor %}
+          {% endif %}
         </div>
         <div class="panelMiembro miembroInteresesGR panelOculto">
           {% for interest in data.piece.fieldsOfInterest %}
