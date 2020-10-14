@@ -30,10 +30,20 @@ module.exports = {
       required: false
     },
     {
-      name: 'projectImage',
+      /* name: 'projectImage',
       label: 'Imagen del proyecto',
       type: 'attachment',
       group: 'images',
+      required: true */
+      name: 'projectImage',
+      label: 'Imagen del proyecto',
+      type: 'singleton',
+      widgetType: 'apostrophe-images',
+      options: {
+        limit: 1,
+        minSize: [ 200, 200 ],
+        aspectRatio: [ 1, 1 ]
+      },
       required: true
     },
     {
@@ -47,17 +57,17 @@ module.exports = {
     {
       name: 'project',
       label: 'Proyecto',
-      fields: [ 'projectName', 'projectAuthors', 'projectUrl', 'projectImage', 'projectDescription' ]
+      fields: [ 'projectName', 'slug', 'projectAuthors', 'projectUrl', 'projectImage', 'projectDescription' ]
     },
     {
       name: 'admin',
       label: 'Administrativo',
-      fields: [ 'slug', 'published', 'tags' ]
+      fields: ['published', 'tags' ]
     }
   ],
   construct: function(self, options) {
     self.beforeSave = function(req, piece, options, callback) {
-      piece.title = piece.name;
+      piece.title = piece.projectName;
       return callback();
     }
   }
