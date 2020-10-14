@@ -116,6 +116,12 @@ module.exports = {
           value: 'prueba3'
         }
       ]
+    },
+    {
+      name: '_projects',
+      label: 'Proyectos',
+      type: 'joinByArray',
+      withType: 'project'
     }
   ],
   arrangeFields: [
