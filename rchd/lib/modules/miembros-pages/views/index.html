@@ -52,7 +52,7 @@
         </div>
       </div>
       <!-- Fin barra de busqueda -->
-      <div class="comite-container">
+      <div class="comite-container" data-apos-ajax-preserved>
         {% for piece in data.pieces %} {% if piece.centralCommittee %}
         <div class="miembro-cuadro-comite centrar-cuadro">
           {% set image = apos.images.first(piece.photo) %} {% if image %}
@@ -76,26 +76,15 @@
 <div class="members-section">
   <div>{{ apos.singleton(data.page, 'header2', 'header', { }) }}</div>
 
-  <div class="miembros-container">
-    {% for piece in data.pieces %} {% if not piece.centralCommittee %}
-    <div class="miembro-cuadro">
-      {% set image = apos.images.first(piece.photo) %} {% if image %}
-      <div class="miembro-cuadro-img">
-        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
-      </div>
-      {% endif %}
-      <div class="miembro-cuadro-overlay"></div>
-      <div class="miembro-cuadro-nombre">
-        <a href="{{ piece._url }}">{{ piece.title }}</a>
-      </div>
-    </div>
-    {% endif %} {% endfor %}
+  <div class="miembros-container" data-apos-ajax-context="miembros" >
+    {% include "indexAjax.html" %}
   </div>
 </div>
 
-{# YES, YOU NEED PAGINATION. You could set the `perPage` option to a large
-number, but eventually you will have performance issues. However, also see the
-discussion of "Load More" and infinite scroll solutions later in this tutorial.
-#} {% import 'apostrophe-pager:macros.html' as pager with context %} {{
-pager.render({ page: data.currentPage, total: data.totalPages }, data.url) }} {%
+{% if data.currentPage < data.totalPages %}
+  {# "Load More" button with the "append=1" flag #}
+  <a href="{{ data.url | build({ page: data.currentPage + 1, append: 1 }) }}">Load More...</a>
+{% endif %} 
+
+{%
 endblock %}
