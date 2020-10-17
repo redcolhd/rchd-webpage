@@ -66,7 +66,7 @@ function makeParticles() {
       urlactual == `${domain}convocatorias`
     ) {
       v.mult(1200);
-      totalParticles = 900;
+      totalParticles = 800;
     } else {
       v.mult(6000);
     }
