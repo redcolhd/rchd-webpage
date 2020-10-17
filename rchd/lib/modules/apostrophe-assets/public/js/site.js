@@ -1,4 +1,4 @@
-const totalParticles = 5000;
+let totalParticles = 5000;
 let v;
 let angle = 0;
 let particles = [];
@@ -39,10 +39,10 @@ function setup() {
 
 function draw() {
   background(0);
+  strokeWeight(1);
+  stroke(255);
   rotateY(angle);
   for (let i = 0; i <= particles.length - 1; i++) {
-    strokeWeight(1);
-    stroke(255);
     point(particles[i].x, particles[i].y, particles[i].z);
   }
   angle += 0.003;
@@ -56,7 +56,8 @@ function makeParticles() {
       urlactual == `${domain}contacto` ||
       urlactual == `${domain}convocatorias`
     ) {
-      v.mult(1500);
+      v.mult(1200);
+      totalParticles = 1000;
     } else {
       v.mult(6000);
     }
