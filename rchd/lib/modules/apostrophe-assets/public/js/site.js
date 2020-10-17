@@ -45,7 +45,14 @@ function draw() {
   for (let i = 0; i <= particles.length - 1; i++) {
     point(particles[i].x, particles[i].y, particles[i].z);
   }
+  if ( urlactual == `${domain}actualizaciones` ||
+  urlactual == `${domain}contacto` ||
+  urlactual == `${domain}convocatorias`){
+    angle += 0.002;
+  }
+  else {
   angle += 0.003;
+  }
 }
 
 function makeParticles() {
