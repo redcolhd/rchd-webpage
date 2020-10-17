@@ -21,6 +21,7 @@ function setup() {
     mySketch.parent("imagenFondoMS");
   }
   else if (
+    urlactual.includes("/miembros/") == true || 
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
     urlactual == `${domain}convocatorias`
@@ -45,7 +46,8 @@ function draw() {
   for (let i = 0; i <= particles.length - 1; i++) {
     point(particles[i].x, particles[i].y, particles[i].z);
   }
-  if ( urlactual == `${domain}actualizaciones` ||
+  if (  urlactual.includes("/miembros/") == true ||
+  urlactual == `${domain}actualizaciones` ||
   urlactual == `${domain}contacto` ||
   urlactual == `${domain}convocatorias`){
     angle += 0.002;
@@ -58,13 +60,13 @@ function draw() {
 function makeParticles() {
   for (let i = 0; i < totalParticles; i++) {
     v = p5.Vector.random3D();
-    if (
+    if (  urlactual.includes("/miembros/") == true ||
       urlactual == `${domain}actualizaciones` ||
       urlactual == `${domain}contacto` ||
       urlactual == `${domain}convocatorias`
     ) {
       v.mult(1200);
-      totalParticles = 1000;
+      totalParticles = 900;
     } else {
       v.mult(6000);
     }

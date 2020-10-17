@@ -1,15 +1,27 @@
 .headerMiembro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  max-width: 100vw;
+  width: 100%;
+  height: 19vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.tituloMiembro {
+  grid-column: 1;
+  z-index: 10;
   text-align: left;
   color: @rchdAnaranjado;
   letter-spacing: 15px;
   font-family: @font-family-display;
   font-size: 40px;
   font-weight: 900;
-  display: flex;
-  align-items: center;
-  height: 17vh !important;
-  background-color: black;
   text-indent: 4vw;
+  background-color: transparent;
+  position: absolute;
+  margin-top: 5vh;
 }
 
 .contenidoMiembro {

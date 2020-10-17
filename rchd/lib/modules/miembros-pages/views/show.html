@@ -1,6 +1,9 @@
 {% extends "layout.html" %} {% block title %}{{ data.piece.title }}{% endblock
 %} {% block main %}
-<div class="headerMiembro" id="sinGif">{{data.piece.name}}</div>
+<div class="headerMiembro" id="imagenFondoHeader">
+  <div class="tituloMiembro">{{data.piece.name}}</div>
+</div>
+
 <div class="contenidoMiembro">
   <div class="contenidoIzquierda">
     {% set image = apos.images.first(data.piece.photo) %} {% if image %}
@@ -25,11 +28,12 @@
     <div>
       <div class="espacioPanelesMiembro">
         <div class="panelMiembro miembroProyectos">
-          {% if data.piece._projects %}
-          {% for project in data.piece._projects %}
-          <div class="elementoPanelM"><a href="{{ project.projectUrl }}">{{project.title}}</a></div>
-          {% endfor %}
-          {% endif %}
+          {% if data.piece._projects %} {% for project in data.piece._projects
+          %}
+          <div class="elementoPanelM">
+            <a href="{{ project.projectUrl }}">{{project.title}}</a>
+          </div>
+          {% endfor %} {% endif %}
         </div>
         <div class="panelMiembro miembroInteresesGR panelOculto">
           {% for interest in data.piece.fieldsOfInterest %}
