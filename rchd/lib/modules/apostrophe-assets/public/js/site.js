@@ -6,32 +6,33 @@ let mySketch;
 let divfondo;
 let urlactual = window.location.href;
 let domain = "http://localhost:3000/";
-
 console.log(urlactual);
 function setup() {
   if (urlactual == domain) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoH");
   }
-  if (urlactual == `${domain}quienes-somos`) {
+  else if (urlactual == `${domain}quienes-somos`) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoQS");
   }
-  if (urlactual == `${domain}miembros`) {
+  else if (urlactual == `${domain}miembros`) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoMS");
   }
-  if (
+  else if (
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
     urlactual == `${domain}convocatorias`
   ) {
     mySketch = createCanvas(screen.width, screen.height * 0.2, WEBGL);
     mySketch.parent("imagenFondoHeader");
-  } else {
+  } 
+  else {
     mySketch = createCanvas(0, 0, WEBGL);
     mySketch.parent("sinGif");
   }
+  
   makeParticles();
   frameRate(180);
 }

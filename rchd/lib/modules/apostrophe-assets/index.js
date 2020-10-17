@@ -15,6 +15,7 @@ module.exports = {
     { name: "modules/busqueda" },
     { name: "modules/footer" },
     { name: "p5Gif/p5" },
+    { name: "p5Gif/p5.sound.min" },
     { name: "p5Gif/sketch" },
   ],
 };
