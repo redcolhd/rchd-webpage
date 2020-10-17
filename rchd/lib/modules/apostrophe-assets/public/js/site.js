@@ -16,7 +16,7 @@ function setup() {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoQS");
   }
-  else if (urlactual == `${domain}miembros`) {
+  else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoMS");
   }
