@@ -56,8 +56,10 @@ var apos = require("apostrophe")({
     "aliados-widgets": {
       extend: 'apostrophe-pieces-widgets'
     },
-    "aliado-info-widgets": {},
-    "projects": {}
+    "projects": {},
+    'projects-pages': {
+      extend: 'apostrophe-pieces-pages'
+    }
   },
   "apostrophe-pages": {
     filters: {
