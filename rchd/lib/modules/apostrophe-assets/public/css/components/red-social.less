@@ -1,20 +1,25 @@
 .contenedor-red-social {
+  padding: 15px;
   font-family: @font-family-display;
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 10vh;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
   justify-items: center;
+  align-items: center;
   width: 40vw;
   margin-top: -2vh;
   .imagen-red-social {
-    grid-column: 1;
-    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
     size: 10px;
     background-size: contain !important;
   }
 }
 .letra-texto {
-  grid-column: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   font-size: 15px;
   color: black;
   font-weight: 10;
@@ -25,7 +30,16 @@
   text-decoration: none;
   color: black;
 }
-
+.texto-titulo {
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 .linkRedes:hover {
   text-shadow: 0 0 50px @rchdAzul;
   font-size: 20px;
