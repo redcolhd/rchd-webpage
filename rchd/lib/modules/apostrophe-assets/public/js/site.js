@@ -24,7 +24,8 @@ function setup() {
     urlactual.includes("/miembros/") == true || 
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
-    urlactual == `${domain}convocatorias`
+    urlactual == `${domain}convocatorias` ||
+    urlactual == `${domain}proyectos`
   ) {
     mySketch = createCanvas(screen.width, screen.height * 0.2, WEBGL);
     mySketch.parent("imagenFondoHeader");
