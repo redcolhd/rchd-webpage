@@ -53,7 +53,7 @@
   </div>
 </div>
   <!-- Fin barra de busqueda -->
-<div class="miembros-container">
+<div class="miembros-container" data-apos-ajax-append>
     {% for piece in data.pieces %}
         <div class="miembro-cuadro">
           {% set image = apos.images.first(piece.photo) %} {% if image %}
@@ -68,3 +68,10 @@
         </div>
     {% endfor %}
 </div>
+
+{% if data.currentPage < data.totalPages %} {# "Load More" button with the
+"append=1" flag #}
+<a href="{{ data.url | build({ page: data.currentPage + 1, append: 1 }) }}"
+  >Load More...</a
+>
+{% endif %}
