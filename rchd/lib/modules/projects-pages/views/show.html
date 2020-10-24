@@ -5,33 +5,26 @@
         <div class="tituloMiembro">{{data.piece.title}}</div>
       </div>
       
-      <div class="contenidoMiembro">
-        <div class="contenidoIzquierda">
+      <div class="contenidoProyecto">
+        <div class="contenidoIzquierdaProyecto">
           {% set image = apos.images.first(data.piece.projectImage) %} {% if image %}
           <img
-            class="imagenMiembro"
+            class="imagenProyecto"
             src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"
           />
           {% endif %}
-          <div class="botonMiembro">
+          <div class="botonProyecto">
             <a href="{{data.piece.projectUrl}}" class="linkMiembro">Contacto</a>
           </div>
         </div>
+
+
         <div class="contenidoDerecha">
-          <div class="navPanelMiembro">
-            <div class="circuloMiembro proyectosButton">Proyectos</div>
-            <div class="circuloMiembro interesesGRButton">Intereses generales</div>
-          </div>
-          <div>
-            <div class="espacioPanelesMiembro">
-                  <a href="{{ project.projectUrl }}">{{data.piece.projectAuthors}}</a>
-            </div>
-              </div>
-              <div class="panelMiembro miembroInteresesGR panelOculto">
-                <div class="elementoPanelM">{{data.piece.projectDescription}}</div>
-              </div>
-            </div>
-          </div>
+          <div class="TituloContenidoProyecto">Descripción</div>
+          <div class="contenicoDescripcionProyecto">{{data.piece.projectDescription}}</div>
+          <div class="TituloContenidoProyecto">Autores</div>
+          <div class="contenicoDescripcionProyecto">{{data.piece.projectAuthors}}</div>
+          
         </div>
       </div>
 

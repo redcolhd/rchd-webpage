@@ -25,7 +25,8 @@ function setup() {
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
     urlactual == `${domain}convocatorias` ||
-    urlactual == `${domain}proyectos`
+    urlactual == `${domain}proyectos`||
+    urlactual.includes("/proyectos/") == true 
   ) {
     mySketch = createCanvas(screen.width, screen.height * 0.2, WEBGL);
     mySketch.parent("imagenFondoHeader");
@@ -51,7 +52,8 @@ function draw() {
   urlactual == `${domain}actualizaciones` ||
   urlactual == `${domain}contacto` ||
   urlactual == `${domain}convocatorias`||
-  urlactual == `${domain}proyectos`){
+  urlactual == `${domain}proyectos`||
+  urlactual.includes("/proyectos/") == true ){
     angle += 0.002;
   }
   else {
@@ -66,7 +68,8 @@ function makeParticles() {
       urlactual == `${domain}actualizaciones` ||
       urlactual == `${domain}contacto` ||
       urlactual == `${domain}convocatorias`||
-      urlactual == `${domain}proyectos`
+      urlactual == `${domain}proyectos`||
+      urlactual.includes("/proyectos/") == true 
     ) {
       v.mult(1200);
       totalParticles = 800;
