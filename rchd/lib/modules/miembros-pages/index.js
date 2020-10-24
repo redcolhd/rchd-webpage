@@ -7,6 +7,9 @@ module.exports = {
       },
       {
         name: 'fieldsOfInterest'
+      },
+      {
+        name: '_projects'
       }
     ]
   }

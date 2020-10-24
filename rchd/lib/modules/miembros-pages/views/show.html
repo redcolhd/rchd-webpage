@@ -30,8 +30,12 @@
         <div class="panelMiembro miembroProyectos">
           {% if data.piece._projects %} {% for project in data.piece._projects
           %}
-          <div class="elementoPanelM">
-            <a href="{{ project.projectUrl }}">{{project.title}}</a>
+          <div class="elementoProyecto">
+            <a class="projectName" href="{{ project.projectUrl }}"
+              >{{project.projectName}}</a
+            >
+            <div class="projectAuthors">{{project.projectAuthors}}</div>
+            <div class="projectDescription">{{project.projectDescription}}</div>
           </div>
           {% endfor %} {% endif %}
         </div>
