@@ -47,6 +47,10 @@ var apos = require("apostrophe")({
     "miembros-pages": {
       extend: "apostrophe-pieces-pages",
     },
+    "comite-miembros": {},
+    "comite-miembros-widgets": {
+      extend: "apostrophe-pieces-widgets"
+    },
     actualizacions: {},
     "actualizacions-widgets": {
       extend: "apostrophe-pieces-widgets",
