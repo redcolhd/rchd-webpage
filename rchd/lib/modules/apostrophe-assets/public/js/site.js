@@ -50,7 +50,8 @@ function draw() {
   if (  urlactual.includes("/miembros/") == true ||
   urlactual == `${domain}actualizaciones` ||
   urlactual == `${domain}contacto` ||
-  urlactual == `${domain}convocatorias`){
+  urlactual == `${domain}convocatorias`||
+  urlactual == `${domain}proyectos`){
     angle += 0.002;
   }
   else {
@@ -64,7 +65,8 @@ function makeParticles() {
     if (  urlactual.includes("/miembros/") == true ||
       urlactual == `${domain}actualizaciones` ||
       urlactual == `${domain}contacto` ||
-      urlactual == `${domain}convocatorias`
+      urlactual == `${domain}convocatorias`||
+      urlactual == `${domain}proyectos`
     ) {
       v.mult(1200);
       totalParticles = 800;

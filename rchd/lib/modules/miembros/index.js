@@ -72,8 +72,8 @@ module.exports = {
       type: 'checkboxes',
       choices: [
         {
-          label: 'Prueba',
-          value: 'prueba'
+          label: 'Esta es una prueba mas larga',
+          value: 'Esta es una prueba mas larga'
         },
         {
           label: 'Prueba2',
