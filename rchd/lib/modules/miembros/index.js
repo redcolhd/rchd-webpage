@@ -48,12 +48,6 @@ module.exports = {
       required: true
     },
     {
-      name: 'centralCommittee',
-      label: '¿Hace parte del Comité Central?',
-      type: 'boolean',
-      required: true
-    },
-    {
       name: 'education',
       label: 'Titulo profesional o grado académico',
       type: 'string',
@@ -127,8 +121,8 @@ module.exports = {
   arrangeFields: [
     {
       name: 'contact',
-      label: 'Contact',
-      fields: [ 'name', 'email', 'userId', 'phone', 'photo', 'education', 'socialMedia', 'institutionalMembership' ]
+      label: 'Contacto',
+      fields: [ 'name', 'slug', 'email', 'userId', 'phone', 'photo', 'education', 'socialMedia', 'institutionalMembership' ]
     },
     {
       name: 'interests',
@@ -138,17 +132,18 @@ module.exports = {
     {
       name: 'project',
       label: 'Proyecto',
-      fields: [ 'projectName', 'projectAuthors', 'projectUrl', 'projectImage', 'projectDescription' ]
+      fields: [ '_projects' ]
     },
     {
       name: 'admin',
       label: 'Administrativo',
-      fields: [ 'slug', 'published', 'centralCommittee', 'tags' ]
+      fields: ['published', 'centralCommittee', 'tags' ]
     }
   ],
   construct: function(self, options) {
     self.beforeSave = function(req, piece, options, callback) {
       piece.title = piece.name;
+      /* piece.slug = slugify(piece.name); */
       return callback();
     }
   }
