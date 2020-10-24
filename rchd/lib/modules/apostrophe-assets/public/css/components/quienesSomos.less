@@ -71,6 +71,7 @@
   display: grid;
   grid-template-columns: repeat(3, (100vw/3));
   grid-template-rows: 100vh/3 2 * 100vh/3;
+  background-color: @rchdGris;
 }
 .aliado {
   /* se centran las imagenes de los aliados*/
@@ -84,6 +85,8 @@
   align-items: center; */
   display: grid;
   grid-template-rows: 1fr 1fr;
+  border: 2px solid @rchdAzul;
+  border-radius: 21px;
 }
 .imagenFondoAliados {
   grid-row-start: 1;
@@ -120,6 +123,7 @@
 
   img {
     height: 100%;
+    border-radius: 20px;
   }
 }
 
@@ -149,6 +153,7 @@
 .aliado:hover {
   .aliado-overlay {
     display: block;
+    border-radius: 20px;
   }
 
   .aliado-nombre {
