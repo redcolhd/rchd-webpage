@@ -76,15 +76,14 @@
 <div class="members-section">
   <div>{{ apos.singleton(data.page, 'header2', 'header', { }) }}</div>
 
-  <div class="miembros-container" data-apos-ajax-context="miembros" >
+  <div class="miembros-container" data-apos-ajax-context="miembros">
     {% include "indexAjax.html" %}
   </div>
 </div>
 
-{% if data.currentPage < data.totalPages %}
-  {# "Load More" button with the "append=1" flag #}
-  <a href="{{ data.url | build({ page: data.currentPage + 1, append: 1 }) }}">Load More...</a>
-{% endif %} 
-
-{%
-endblock %}
+{% if data.currentPage < data.totalPages %} {# "Load More" button with the
+"append=1" flag #}
+<a href="{{ data.url | build({ page: data.currentPage + 1, append: 1 }) }}"
+  >Load More...</a
+>
+{% endif %} {% endblock %}
