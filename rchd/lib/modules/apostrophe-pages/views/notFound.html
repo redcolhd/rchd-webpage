@@ -1,4 +1,15 @@
 {% extends "layout.html" %} {% block title %}404 - Page not found{% endblock %}
 {% block main %}
-<div class="contenedorNotFound"></div>
-{% endblock %}
+<div
+  style="background-image: url('images/notfound.png')"
+  class="contenedorNotFound"
+>
+  <div class="floatingMsg">
+    <div class="notFoundTitle">ERROR 404</div>
+    <div class="notFoundText">
+      No encontramos lo que buscas. Puedes usar el menú de navegación o volver a
+      la página anterior.
+    </div>
+  </div>
+  {% endblock %}
+</div>

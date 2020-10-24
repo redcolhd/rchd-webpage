@@ -1,11 +1,41 @@
 .contenedorNotFound {
-  background-color: black;
   height: 87vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mensajesNotFound {
-  color: rgb(97, 97, 97);
-  font-size: 16px;
+.floatingMsg {
+  height: 50vh;
+  width: 45vw;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 1px @rchdAzul;
+  -webkit-box-shadow: 0px 0px 31px 10px rgba(24, 32, 33, 1);
+  -moz-box-shadow: 0px 0px 31px 10px rgba(24, 32, 33, 1);
+  box-shadow: 0px 0px 31px 10px rgba(24, 32, 33, 1);
+}
+
+.notFoundTitle {
+  padding: 10px;
+  font-family: @font-family-body;
+  font-size: 50px;
+  font-weight: bold;
+  color: @rchdAnaranjado;
+  text-align: center;
+  padding: 25px;
+}
+
+.notFoundText {
   font-family: @font-family-display;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  width: 80%;
+  line-height: 30px;
 }
