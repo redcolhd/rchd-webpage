@@ -31,7 +31,7 @@
           {% if data.piece._projects %} {% for project in data.piece._projects
           %}
           <div class="elementoProyecto">
-            <a class="projectName" href="{{ project.projectUrl }}"
+            <a class="projectName" href="{{ project._url }}"
               >{{project.projectName}}</a
             >
             <div class="projectAuthors">{{project.projectAuthors}}</div>
