@@ -15,18 +15,19 @@
   </div>
   <div class="botonQuienesSomos"></div>
 </div>
-<div class="gridAliados">
-  <div class="imagenFondoAliados">
-    {{ apos.singleton(data.page, 'imagenFondo2', 'apostrophe-images', { limit:
-    1, size: 'full' }) }}
-  </div>
-  <div class="tituloAliados">
+
+  
+  <div class="tituloColaboradores">
     {{ apos.singleton(data.page, 'textoTituloAliados', 'apostrophe-rich-text', {
     }) }}
   </div>
-  <div class="aliado1">
-    {{ apos.area(data.page, 'filaAliados', { widgets: { 'aliados': {} } }) }}
+  
+  <div class="colaboradores">
+    {{ apos.area(data.page, 'colaboradores', { widgets: {  boton:{},
+    'apostrophe-rich-text':{ toolbar: [ 'Styles', 'Bold', 'Italic' ], styles: [
+    { name: 'Heading', element: 'h3' }, { name: 'Subheading', element: 'h5' }, {
+    name: 'Paragraph', element: 'p' } ] } } }) }}
   </div>
-</div>
+
 
 {%endblock%}
