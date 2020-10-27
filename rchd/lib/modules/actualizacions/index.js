@@ -16,9 +16,9 @@ module.exports = {
           label: "TostadaHD",
         },
         {
-          name: "Blog RCHD",
-          value: "Blog RCHD",
-          label: "Bolg RCHD",
+          name: "Blog Cultura y Bits",
+          value: "Blog Cultura y Bits",
+          label: "Bolg Cultura y Bits",
         },
       ],
     },
