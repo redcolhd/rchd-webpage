@@ -4,8 +4,9 @@
 <div class="members-section">
   <!-- Header -->
   <div>{{ apos.singleton(data.page, 'header', 'header', { }) }}</div>
-  <!-- Barra de búsqueda -->
-  <!-- <div class="contenedor-busqqueda-tag">
+  <div class="seccion-barra-nuevoProyecto">
+        <!-- Barra de búsqueda -->
+  <div class="contenedor-busqqueda-tag">
     <div class="contenedor-busqueda">
       <ul class="tag-filters">
         <li>
@@ -48,7 +49,18 @@
         </li>
       </ul>
     </div>
-  </div> -->
+  </div> 
+  <!-- Fin Barra de búsqueda -->
+    
+    <div class="nuevoProyecto">
+      {{ apos.area(data.page, 'nuevoProyecto', { widgets: {  boton:{},
+      'apostrophe-rich-text':{ toolbar: [ 'Styles', 'Bold', 'Italic' ], styles: [
+      { name: 'Heading', element: 'h3' }, { name: 'Subheading', element: 'h5' }, {
+      name: 'Paragraph', element: 'p' } ] } } }) }}
+  
+  </div>
+  </div>
+  
   <!-- Grid miembros -->
   <div class="miembros-container">
     {% for piece in data.pieces %}
