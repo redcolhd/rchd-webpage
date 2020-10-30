@@ -3,6 +3,7 @@
     {% for piece in data.pieces %}
         <div class="miembro-cuadro">
           {% set image = apos.images.first(piece.photo) %} {% if image %}
+          <div class="textoEducacion">{{piece.education}}</div>
           <div class="miembro-cuadro-img">
             <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
           </div>
