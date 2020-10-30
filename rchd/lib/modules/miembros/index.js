@@ -86,6 +86,26 @@ module.exports = {
       ]
     },
     {
+      name: 'fieldsOfKnowledge',
+      label: 'Campos de práctica en las Humanidades Digitales',
+      required: true,
+      type: 'checkboxes',
+      choices: [
+        {
+          label: 'Esta es una prueba mas larga',
+          value: 'Esta es una prueba mas larga'
+        },
+        {
+          label: 'Prueba2',
+          value: 'prueba2'
+        },
+        {
+          label: 'Prueba3',
+          value: 'prueba3'
+        }
+      ]
+    },
+    {
       name: 'lookingFor',
       label: '¿Qué buscas en la RCHD?',
       type: 'string',
@@ -127,7 +147,7 @@ module.exports = {
     {
       name: 'interests',
       label: 'Intereses',
-      fields: ['fieldsOfInterest', 'lookingFor', 'collaborateIn'] 
+      fields: ['fieldsOfInterest', 'fieldsOfKnowledge', 'lookingFor', 'collaborateIn'] 
     },
     {
       name: 'project',

@@ -9,6 +9,9 @@ module.exports = {
         name: 'fieldsOfInterest'
       },
       {
+        name: 'fieldsOfKnowledge'
+      },
+      {
         name: '_projects'
       }
     ]
