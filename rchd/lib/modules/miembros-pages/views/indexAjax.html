@@ -1,23 +1,47 @@
-
 <div class="miembros-container" data-apos-ajax-append>
-    {% for piece in data.pieces %}
-        <div class="miembro-cuadro">
-          {% set image = apos.images.first(piece.photo) %} {% if image %}
-          <div class="textoEducacion">{{piece.education}}</div>
-          <div class="miembro-cuadro-img">
-            <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
-          </div>
-          {% endif %}
-          <div class="miembro-cuadro-overlay"></div>
-          <div class="miembro-cuadro-nombre">
-            <a href="{{ piece._url }}">{{ piece.title }}</a>
-          </div>
-        </div>
-    {% endfor %}
+  {% for piece in data.pieces %}
+  <div class="fichaMiembro">
+    <div class="miembro-cuadro">
+      {% set image = apos.images.first(piece.photo) %} {% if image %}
+      <div class="miembro-cuadro-img">
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+      </div>
+      {% endif %}
+      <div class="miembro-cuadro-overlay"></div>
+      <div class="miembro-cuadro-nombre">
+        <a href="{{ piece._url }}">{{ piece.title }}</a>
+      </div>
+    </div>
+    <div class="textoEducacion">{{piece.education}}</div>
+  </div>
+  {% endfor %}
+</div>
+<div class="miembros-container" data-apos-ajax-append>
+  {% for piece in data.pieces %}
+  <div class="fichaMiembro">
+    <div class="miembro-cuadro">
+      {% set image = apos.images.first(piece.photo) %} {% if image %}
+      <div class="miembro-cuadro-img">
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+      </div>
+      {% endif %}
+      <div class="miembro-cuadro-overlay"></div>
+      <div class="miembro-cuadro-nombre">
+        <a href="{{ piece._url }}">{{ piece.title }}</a>
+      </div>
+    </div>
+    <div class="textoEducacion">{{piece.education}}</div>
+  </div>
+  {% endfor %}
 </div>
 
 {% if data.currentPage < data.totalPages %} {# "Load More" button with the
 "append=1" flag #}
+<a href="{{ data.url | build({ page: data.currentPage + 1, append: 1 }) }}"
+  >Load More...</a
+>
+{% endif %} {% if data.currentPage < data.totalPages %} {# "Load More" button
+with the "append=1" flag #}
 <a href="{{ data.url | build({ page: data.currentPage + 1, append: 1 }) }}"
   >Load More...</a
 >
