@@ -21,9 +21,9 @@
   </div>
   <div class="contenidoDerechaMiembro">
     <div class="navPanelMiembro">
-      <div class="circuloMiembro proyectosButton">Proyectos</div>
-      <div class="circuloMiembro interesesGRButton">Campos</br>de</br>práctica</div>
-      <div class="circuloMiembro interesesHDButton">Campos</br>de</br>interés</div>
+      <div class="circuloMiembro proyectosButton activeCirculoMiembro">Proyectos</div>
+      <div class="circuloMiembro practicaButton">Campos</br>de</br>práctica</div>
+      <div class="circuloMiembro interesesButton">Campos</br>de</br>interés</div>
     </div>
     <div>
       <div class="espacioPanelesMiembro">
@@ -39,12 +39,12 @@
           </div>
           {% endfor %} {% endif %}
         </div>
-        <div class="panelMiembro miembroInteresesGR panelOculto">
+        <div class="panelMiembro miembroPractica panelOculto">
           {% for interest in data.piece.fieldsOfKnowledge %}
           <div class="elementoPanelM">{{interest}}</div>
           {% endfor %}
         </div>
-        <div class="panelMiembro miembroInteresesHD panelOculto">
+        <div class="panelMiembro miembroIntereses panelOculto">
           {% for interest in data.piece.fieldsOfInterest %}
           <div class="elementoPanelM">{{interest}}</div>
           {% endfor %}

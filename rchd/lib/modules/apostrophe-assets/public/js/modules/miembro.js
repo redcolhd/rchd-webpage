@@ -1,17 +1,26 @@
 $(document).ready(function () {
   $(".proyectosButton").click(function () {
     $(".miembroProyectos").removeClass("panelOculto");
-    $(".miembroInteresesGR").addClass("panelOculto");
-    $(".miembroInteresesHD").addClass("panelOculto");
+    $(".miembroPractica").addClass("panelOculto");
+    $(".miembroIntereses").addClass("panelOculto");
+    $(".proyectosButton").addClass("activeCirculoMiembro");
+    $(".practicaButton").removeClass("activeCirculoMiembro");
+    $(".interesesButton").removeClass("activeCirculoMiembro");
   });
-  $(".interesesGRButton").click(function () {
+  $(".practicaButton").click(function () {
     $(".miembroProyectos").addClass("panelOculto");
-    $(".miembroInteresesGR").removeClass("panelOculto");
-    $(".miembroInteresesHD").addClass("panelOculto");
+    $(".miembroPractica").removeClass("panelOculto");
+    $(".miembroIntereses").addClass("panelOculto");
+    $(".proyectosButton").removeClass("activeCirculoMiembro");
+    $(".practicaButton").addClass("activeCirculoMiembro");
+    $(".interesesButton").removeClass("activeCirculoMiembro");
   });
-  $(".interesesHDButton").click(function () {
+  $(".interesesButton").click(function () {
     $(".miembroProyectos").addClass("panelOculto");
-    $(".miembroInteresesGR").addClass("panelOculto");
-    $(".miembroInteresesHD").removeClass("panelOculto");
+    $(".miembroPractica").addClass("panelOculto");
+    $(".miembroIntereses").removeClass("panelOculto");
+    $(".proyectosButton").removeClass("activeCirculoMiembro");
+    $(".practicaButton").removeClass("activeCirculoMiembro");
+    $(".interesesButton").addClass("activeCirculoMiembro");
   });
 });
