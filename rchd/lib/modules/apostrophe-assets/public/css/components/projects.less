@@ -1,15 +1,27 @@
 .seccion-barra-nuevoProyecto {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  padding: 1% 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 .nuevoProyecto {
-  padding-top: 1%;
-  width: 100%;
   text-align: center;
+  width: 75%;
+  right: 2%;
+  margin-left: 25%;
+  margin-top: 2%;
+  padding: 1%;
   font-family: @font-family-body;
+  border-bottom: solid 3px @rchdAnaranjado;
+  letter-spacing: 2px;
   font-size: 15px;
+  transition: all 0.25s linear;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .proyecto-cuadro-img {

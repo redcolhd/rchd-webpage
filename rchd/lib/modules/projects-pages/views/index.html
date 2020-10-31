@@ -53,10 +53,7 @@
     <!-- Fin Barra de búsqueda -->
 
     <div class="nuevoProyecto">
-      {{ apos.area(data.page, 'nuevoProyecto', { widgets: { boton:{},
-      'apostrophe-rich-text':{ toolbar: [ 'Styles', 'Bold', 'Italic' ], styles:
-      [ { name: 'Heading', element: 'h3' }, { name: 'Subheading', element: 'h5'
-      }, { name: 'Paragraph', element: 'p' } ] } } }) }}
+      {{ apos.singleton(data.page, 'link', 'link', { }) }}
     </div>
   </div>
 
