@@ -34,6 +34,7 @@ var apos = require("apostrophe")({
       viewsFolderFallback: path.join(__dirname, "views"),
     },
     "header-widgets": {},
+    "link-widgets": {},
     "red-social-widgets": {},
     "boton-widgets": {},
     "footerPagina-widgets": {},
