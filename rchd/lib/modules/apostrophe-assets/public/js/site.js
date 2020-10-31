@@ -21,7 +21,8 @@ function setup() {
     mySketch.parent("imagenFondoMS");
   }
   else if (
-    urlactual.includes("/miembros/") == true || 
+    urlactual.includes("/miembros/") == true ||
+    urlactual == `${domain}colaboradores` ||
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
     urlactual == `${domain}convocatorias` ||
@@ -49,6 +50,7 @@ function draw() {
     point(particles[i].x, particles[i].y, particles[i].z);
   }
   if (  urlactual.includes("/miembros/") == true ||
+  urlactual == `${domain}colaboradores` ||
   urlactual == `${domain}actualizaciones` ||
   urlactual == `${domain}contacto` ||
   urlactual == `${domain}convocatorias`||
@@ -65,6 +67,7 @@ function makeParticles() {
   for (let i = 0; i < totalParticles; i++) {
     v = p5.Vector.random3D();
     if (  urlactual.includes("/miembros/") == true ||
+      urlactual == `${domain}colaboradores` ||
       urlactual == `${domain}actualizaciones` ||
       urlactual == `${domain}contacto` ||
       urlactual == `${domain}convocatorias`||
