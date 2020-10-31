@@ -19,6 +19,24 @@
   position: relative;
 }
 
+.nuevoProyecto:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: @rchdAzul;
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Correspondencia animación y borde*/
+  transform-origin: left;
+  transform: scale(0);
+  transition: 0.5s linear;
+}
+
+.nuevoProyecto:hover:before {
+  transform: scale(1);
+}
+
 a {
   text-decoration: none;
   color: black;
