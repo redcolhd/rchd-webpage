@@ -58,3 +58,24 @@
   grid-column-start: 3;
   grid-column-end: 4;
 }
+
+@media only screen and (max-width: 1323px) {
+  .gridConvocatoria {
+    grid-template-rows: 0.5fr 1fr;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .gridConvocatoria {
+    grid-template-rows: auto 1fr;
+  }
+  .convocatoriaTitle {
+    font-size: 23px;
+  }
+  .convocatoriaDate {
+    font-size: 13px;
+  }
+  .convocatoriaDescription {
+    font-size: 13px;
+  }
+}
