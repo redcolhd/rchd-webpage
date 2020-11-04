@@ -12,7 +12,6 @@
 
 .redes-sociales {
   grid-column: 2;
-  display: grid;
   width: 40vw !important;
   margin-top: 6vh;
 }
@@ -26,5 +25,25 @@
   p {
     margin: 5px;
     padding: 5px;
+  }
+}
+@media only screen and (max-width: 611px) {
+  .contenido-pagina-contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .formulario-contacto {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .redes-sociales {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
   }
 }
