@@ -1,7 +1,7 @@
 <div class="comite-container">
     {% for piece in data.widget._pieces %}
     <div class="miembro-cuadro-comite centrar-cuadro">
-      {% set image = apos.images.first(piece.photo) %} {% if image %}
+      {% set image = apos.images.first(piece._miembro.photo) %} {% if image %}
       <div class="miembro-cuadro-img">
         <img
           src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"
@@ -9,7 +9,7 @@
       </div>
       {% endif %}
       <div class="nombre-miembro">
-        <a href="{{ piece._url }}" class="nombres-comite"
+        <a href="{{ piece._miembro._url }}" class="nombres-comite"
           >{{ piece.title }}</a
         >
       </div>
