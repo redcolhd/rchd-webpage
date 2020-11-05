@@ -22,6 +22,7 @@ function setup() {
   }
   else if (
     urlactual.includes("/miembros/") == true ||
+    urlactual == `${domain}comite-base-historico` ||
     urlactual == `${domain}colaboradores` ||
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
@@ -50,6 +51,7 @@ function draw() {
     point(particles[i].x, particles[i].y, particles[i].z);
   }
   if (  urlactual.includes("/miembros/") == true ||
+  urlactual == `${domain}comite-base-historico` ||
   urlactual == `${domain}colaboradores` ||
   urlactual == `${domain}actualizaciones` ||
   urlactual == `${domain}contacto` ||
@@ -67,6 +69,7 @@ function makeParticles() {
   for (let i = 0; i < totalParticles; i++) {
     v = p5.Vector.random3D();
     if (  urlactual.includes("/miembros/") == true ||
+    urlactual == `${domain}comite-base-historico` ||
       urlactual == `${domain}colaboradores` ||
       urlactual == `${domain}actualizaciones` ||
       urlactual == `${domain}contacto` ||
