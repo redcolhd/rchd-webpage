@@ -1,7 +1,7 @@
 /* seccion quienes somos*/
 .gridQuienesSomos {
   display: grid;
-  grid-template-columns: 2 * (100vw/5) 2 * (100vw/5) (100vw/5);
+  grid-template-columns: 40vw 40vw 20vw;
   grid-template-rows: repeat(4, 21.5vh);
   column-gap: 2%;
 }
@@ -21,7 +21,7 @@
 }
 .imagenLogo {
   margin-left: 2%;
-  height: (100vh/5);
+  height: (100vh);
   width: 70%;
   grid-column-start: 1;
   grid-column-end: 2;
@@ -59,12 +59,7 @@
   justify-content: center;
   align-items: center;
 }
-.botonQuienesSomos {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
+
 .tituloColaboradores {
   margin-top: 15vh;
   color: @rchdAnaranjado;
@@ -84,5 +79,58 @@
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 5px;
-  margin: 1% 20%;
+}
+
+@media only screen and (max-width: 800px) {
+  .gridQuienesSomos {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 21.5vh);
+    gap: 5px;
+  }
+
+  .imagenFondo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    z-index: -1;
+  }
+  .imagenLogo {
+    padding-top: 10px;
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .tituloQuienesSomos {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+  }
+  .textoQuienesSomos {
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .tituloColaboradores {
+    margin-top: 0;
+    letter-spacing: 10px;
+    font-size: 35px;
+    font-weight: 900;
+    font-family: @font-family-display;
+  }
+  .colaboradores {
+    text-align: center;
+    font-size: 17px;
+    margin: 0;
+  }
 }
