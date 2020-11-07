@@ -57,17 +57,17 @@
     </div>
   </div>
 
-  <!-- Grid miembros -->
-  <div class="miembros-container">
+  <!-- Grid Proyectos -->
+  <div class="proyectos-container">
     {% for piece in data.pieces %}
-    <div class="miembro-cuadro">
+    <div class="proyecto-cuadro">
       {% set image = apos.images.first(piece.projectImage) %} {% if image %}
       <div class="proyecto-cuadro-img">
         <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
       </div>
       {% endif %}
       <div class="proyecto-cuadro-overlay"></div>
-      <div class="miembro-cuadro-nombre">
+      <div class="proyecto-cuadro-nombre">
         <a href="{{ piece._url }}">{{ piece.title }}</a>
       </div>
     </div>
