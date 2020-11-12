@@ -84,21 +84,26 @@
 @media only screen and (max-width: 800px) {
   .gridQuienesSomos {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 21.5vh);
-    gap: 5px;
+    grid-template-rows: 40vh 20vh 37vh;
+    gap: 0;
   }
 
   .imagenFondo {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 5;
+    grid-row-end: 3;
     z-index: -1;
-  }
-  .imagenLogo {
-    padding-top: 10px;
     width: 200px;
     height: 200px;
+  }
+  .imagenLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    width: 250px;
+    height: 250px;
     justify-self: center;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -110,8 +115,9 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-    justify-self: center;
-    align-self: center;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
   }
   .textoQuienesSomos {
     padding: 10px;
