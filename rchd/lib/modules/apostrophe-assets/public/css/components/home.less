@@ -48,7 +48,7 @@
   grid-column-start: 2;
   grid-column-end: 3;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .menu3 {
   grid-row-start: 3;
@@ -173,5 +173,25 @@
     grid-column-end: 3;
     align-items: center;
     justify-content: center;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .menu {
+    justify-content: start;
+  }
+  .menu2 {
+    justify-content: flex-end;
+  }
+  .menu3 {
+    justify-content: center;
+  }
+  .menu4 {
+    justify-content: center;
+  }
+  .menu5 {
+    justify-content: flex-end;
+  }
+  .menu6 {
+    justify-content: start;
   }
 }
