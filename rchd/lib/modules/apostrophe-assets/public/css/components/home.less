@@ -1,6 +1,6 @@
 .divfondo {
   canvas {
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
     z-index: -1;
   }
@@ -23,6 +23,16 @@
   grid-row-end: 6;
   grid-column-start: 3;
   grid-column-end: 6;
+  width: 50vw;
+  height: 66vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .imagenRedHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .menu {
   grid-row-start: 1;
@@ -72,4 +82,97 @@
   grid-column-end: 4;
   display: flex;
   justify-content: start;
+}
+@media only screen and (max-width: 1000px) {
+  .gridHome {
+    grid-template-columns: 10vw 20vw 20vw 20vw 20vw 10vw;
+    gap: 0;
+  }
+  .imagenRedHome {
+    width: 420px;
+    height: 420px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .gridHome {
+    grid-template-columns: 0vw 25vw 25vw 25vw 25vw 0vw;
+  }
+  .imagenRedHome {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .gridHome {
+    grid-template-rows: repeat(5, 100vh/5);
+    grid-template-columns: repeat(2, 100vw/2);
+  }
+  .imagenFondoH {
+    grid-row-start: 1;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    z-index: -1;
+  }
+  .imagenLogoRed {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100vw;
+    height: 50vh;
+
+    .imagenRedHome {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .menu {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .menu2 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .menu3 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu4 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu5 {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu6 {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-items: center;
+    justify-content: center;
+  }
 }
