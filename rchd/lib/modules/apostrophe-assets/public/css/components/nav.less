@@ -1,9 +1,8 @@
 .contenedorNav {
   display: grid;
   grid-template-rows: 7vh 93vh;
-  position: fixed;
-  width: 7.5vw;
-  right: 3vw;
+  position: absolute;
+  right: 0px;
 }
 
 .indexNav {
@@ -239,33 +238,41 @@ ul {
 
 @media only screen and (max-width: 600px) {
   .navIcon {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
   }
 
   .contenedorNav {
-    right: 16vw;
-    width: 30vw;
+    width: 190px;
+    right: -130px;
   }
 
   .menu_shown .mobile.menuTabs {
-    transform: translateX(-44vw);
+    transform: translateX(-170px);
+  }
+  .bar2,
+  .bar3,
+  .bar4,
+  .hamIcon {
+    top: 12px;
   }
 
   .mobile.menuTabs {
-    width: 50vw;
+    width: 200px;
   }
 
   .hamburger {
     margin-top: -8px;
+    margin-left: -10px;
+    width: 20px;
   }
 
   .hamIcon .bar5 {
-    bottom: 2px;
+    bottom: 5px;
   }
 
   .bar1 {
-    top: 2px;
+    top: 3px;
   }
 
   .hamburger .bar {
