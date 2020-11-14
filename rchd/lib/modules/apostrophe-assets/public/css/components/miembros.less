@@ -11,9 +11,16 @@
 }
 .miembros-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(195px, 17vw));
+  grid-template-columns: repeat(2, 48vw);
   gap: 2%;
   margin: 3%;
+
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: auto;
+    gap: 2%;
+  }
 }
 
 .fichaMiembro {
