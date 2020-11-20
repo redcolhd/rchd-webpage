@@ -232,3 +232,23 @@
 .panelOculto {
   display: none;
 }
+
+@media only screen and (max-width: 800px) {
+  .contenidoMiembro {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenidoIzquierdaMiembro {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .tituloMiembro {
+    letter-spacing: 10px;
+    font-size: 30px;
+  }
+  .contenidoDerechaMiembro {
+    width: 100%;
+    grid-template-rows: 20vh minmax(20vh, auto);
+  }
+}
