@@ -18,10 +18,10 @@ module.exports = {
       required: false
     },
     {
-      name: 'projectAuthors',
+      name: '_miembros',
       label: 'Autores',
-      type: 'string',
-      required: true
+      type: 'joinByArray',
+      withType: 'miembro'
     },
     {
       name: 'projectUrl',
@@ -57,7 +57,7 @@ module.exports = {
     {
       name: 'project',
       label: 'Proyecto',
-      fields: [ 'projectName', 'slug', 'projectAuthors', 'projectUrl', 'projectImage', 'projectDescription' ]
+      fields: [ 'projectName', 'slug', '_miembros', 'projectUrl', 'projectImage', 'projectDescription' ]
     },
     {
       name: 'admin',
