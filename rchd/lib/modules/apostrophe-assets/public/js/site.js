@@ -7,6 +7,7 @@ let divfondo;
 let urlactual = window.location.href;
 let domain = "http://localhost:3000/";
 console.log(urlactual);
+
 function setup() {
   if (urlactual == domain) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
@@ -86,3 +87,8 @@ function makeParticles() {
     particles.push(v);
   }
 }
+
+$(window).resize(function(){
+  console.log("Resized")
+  setup();
+});
