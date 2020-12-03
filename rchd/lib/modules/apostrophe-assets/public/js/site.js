@@ -80,7 +80,17 @@ function makeParticles() {
     ) {
       v.mult(1200);
       totalParticles = 800;
-    } else {
+    } else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true) {
+      if (screen.width > 600)
+      {
+        v.mult(6000);
+      }
+      else if (screen.width <= 600)
+      {
+        v.mult(1200);
+      }
+    } 
+    else {
       v.mult(6000);
     }
 
