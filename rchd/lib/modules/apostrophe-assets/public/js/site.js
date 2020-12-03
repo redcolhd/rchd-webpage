@@ -78,8 +78,16 @@ function makeParticles() {
       urlactual == `${domain}proyectos`||
       urlactual.includes("/proyectos/") == true 
     ) {
-      v.mult(1200);
-      totalParticles = 800;
+      if (screen.width > 600)
+      {
+        v.mult(1200);
+        totalParticles = 800;
+      }
+      else if (screen.width <= 600)
+      {
+        v.mult(900);
+        totalParticles = 600;
+      }
     } 
     else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true
       || urlactual == `${domain}quienes-somos`) {
@@ -90,8 +98,7 @@ function makeParticles() {
       else if (screen.width <= 600)
       {
         v.mult(1200);
-              totalParticles = 800;
-
+        totalParticles = 800;
       }
     } 
     else {
