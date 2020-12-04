@@ -189,7 +189,7 @@
 }
 
 .elementoProyecto {
-  height: 20vh;
+  height: auto;
   background-color: #e2e4e435;
   margin: 5px;
   padding: 10px;
@@ -246,9 +246,13 @@
   .tituloMiembro {
     letter-spacing: 10px;
     font-size: 30px;
+    max-width: 250px;
   }
   .contenidoDerechaMiembro {
     width: 100%;
     grid-template-rows: 20vh minmax(20vh, auto);
+  }
+  .miembroProyectos {
+    grid-template-columns: 1fr;
   }
 }
