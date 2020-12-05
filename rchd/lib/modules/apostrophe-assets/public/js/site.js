@@ -90,7 +90,7 @@ function makeParticles() {
       }
     } 
     else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true
-      || urlactual == `${domain}quienes-somos`) {
+      || urlactual == `${domain}quienes-somos`|| urlactual == domain) {
       if (screen.width > 600)
       {
         v.mult(6000);
@@ -98,7 +98,6 @@ function makeParticles() {
       else if (screen.width <= 600)
       {
         v.mult(1200);
-        totalParticles = 800;
       }
     } 
     else {
