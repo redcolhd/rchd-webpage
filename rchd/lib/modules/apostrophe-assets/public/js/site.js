@@ -8,7 +8,7 @@ let urlactual = window.location.href;
 let domain = "http://localhost:3000/";
 console.log(urlactual);
 
-function setup() {
+function setup(type) {
   if (urlactual == domain) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoH");
@@ -39,7 +39,7 @@ function setup() {
     mySketch.parent("sinGif");
   }
   
-  makeParticles();
+  makeParticles(type);
   frameRate(180);
 }
 
@@ -66,49 +66,52 @@ function draw() {
   }
 }
 
-function makeParticles() {
+function makeParticles(type) {
+  
+  type == true ? totalParticles = 0 : totalParticles = 5000;
+
   for (let i = 0; i < totalParticles; i++) {
     v = p5.Vector.random3D();
+    
     if (  urlactual.includes("/miembros/") == true ||
-    urlactual == `${domain}comite-base-historico` ||
+      urlactual == `${domain}comite-base-historico` ||
       urlactual == `${domain}colaboradores` ||
       urlactual == `${domain}actualizaciones` ||
       urlactual == `${domain}contacto` ||
       urlactual == `${domain}convocatorias`||
       urlactual == `${domain}proyectos`||
-      urlactual.includes("/proyectos/") == true 
-    ) {
-      if (screen.width > 600)
-      {
-        v.mult(1200);
-        totalParticles = 800;
-      }
+      urlactual.includes("/proyectos/") == true ) 
+    {
+       if (screen.width > 600)
+        {
+          v.mult(1200);
+          totalParticles = 800;
+        }
       else if (screen.width <= 600)
-      {
-        v.mult(900);
-        totalParticles = 600;
-      }
-    } 
-    else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true
+        {
+          v.mult(900);
+          totalParticles = 600;
+        }
+      } 
+    
+      else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true
       || urlactual == `${domain}quienes-somos`|| urlactual == domain) {
-      if (screen.width > 600)
-      {
-        v.mult(6000);
-      }
-      else if (screen.width <= 600)
-      {
-        v.mult(1200);
-      }
-    } 
-    else {
+        
+            if (screen.width <= 600)
+          {
+            v.mult(1200);
+          }
+           } 
+      else {
       v.mult(6000);
     }
-
+    
     particles.push(v);
   }
+
 }
 
 $(window).resize(function(){
   console.log("Resized")
-  setup();
+  setup(true);
 });
