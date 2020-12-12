@@ -14,7 +14,7 @@ function setup(type) {
     mySketch.parent("imagenFondoH");
   }
   else if (urlactual == `${domain}quienes-somos`) {
-    mySketch = createCanvas(screen.width, screen.height*1.2, WEBGL);
+    mySketch = createCanvas(screen.width, screen.height*1.3, WEBGL);
     mySketch.parent("imagenFondoQS");
   }
   else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true) {
