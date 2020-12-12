@@ -6,7 +6,7 @@ let mySketch;
 let divfondo;
 let urlactual = window.location.href;
 let domain = "http://localhost:3000/";
-console.log(urlactual);
+
 
 function setup(type) {
   if (urlactual == domain) {
@@ -18,7 +18,11 @@ function setup(type) {
     mySketch.parent("imagenFondoQS");
   }
   else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true) {
-    mySketch = createCanvas(screen.width, screen.height, WEBGL);
+    if (screen.width<600){
+      mySketch = createCanvas(screen.width, screen.height*1.2, WEBGL);
+    }else{
+      mySketch = createCanvas(screen.width, screen.height*1.1, WEBGL);
+    }
     mySketch.parent("imagenFondoMS");
   }
   else if (
@@ -115,6 +119,5 @@ function makeParticles(type) {
 }
 
 $(window).resize(function(){
-  console.log("Resized")
   setup(true);
 });
