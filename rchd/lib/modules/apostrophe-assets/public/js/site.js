@@ -14,8 +14,13 @@ function setup(type) {
     mySketch.parent("imagenFondoH");
   }
   else if (urlactual == `${domain}quienes-somos`) {
-    mySketch = createCanvas(screen.width, screen.height*1.3, WEBGL);
-    mySketch.parent("imagenFondoQS");
+    if (screen.width > 600) {
+          mySketch = createCanvas(screen.width, screen.height*1.3, WEBGL);
+        }
+      else if (screen.width <= 600) {
+           mySketch = createCanvas(screen.width, screen.height, WEBGL);
+        }
+     mySketch.parent("imagenFondoQS");
   }
   else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true) {
     if (screen.width<600){
