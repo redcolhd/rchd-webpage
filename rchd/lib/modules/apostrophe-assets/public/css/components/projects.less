@@ -3,6 +3,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 50% 50%;
+  }
 }
 .nuevoProyecto {
   text-align: center;
@@ -16,6 +19,10 @@
   font-size: 15px;
   transition: all 0.25s linear;
   position: relative;
+  @media only screen and (max-width: 600px) {
+    width: 85%;
+    margin-left: 10%;
+  }
 }
 .nuevoProyecto:before {
   content: "";
@@ -39,7 +46,7 @@ a {
 }
 .proyectos-container {
   display: grid;
-  grid-template-columns: repeat(2, 48vw);
+  grid-template-columns: repeat(2, 45vw);
   gap: 2%;
   padding: 3%;
 
@@ -56,7 +63,6 @@ a {
     grid-template-rows: auto;
     gap: 2%;
   }
-
 }
 .proyecto-cuadro {
   display: grid;
