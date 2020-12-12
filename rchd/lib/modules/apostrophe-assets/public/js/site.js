@@ -18,7 +18,7 @@ function setup(type) {
           mySketch = createCanvas(screen.width, screen.height*1.3, WEBGL);
         }
       else if (screen.width <= 600) {
-           mySketch = createCanvas(screen.width, screen.height, WEBGL);
+           mySketch = createCanvas(screen.width, screen.height*1.3, WEBGL);
         }
      mySketch.parent("imagenFondoQS");
   }
