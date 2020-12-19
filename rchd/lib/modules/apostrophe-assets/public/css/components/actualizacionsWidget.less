@@ -23,7 +23,8 @@
 }
 
 .actualizacionsTitle {
-  font-size: 25px;
+  font-size: 23px;
+  padding-bottom: 6px;
   grid-column: 1;
   grid-row: 2;
   font-family: @font-family-display;
@@ -77,19 +78,32 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .gridActualizacions {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+
   .actualizacionsType {
     font-size: 13px;
+    align-self: center;
   }
   .postDate {
     font-size: 13px;
+    padding-top: 8px;
+    grid-row: 4;
+    grid-column: 1;
   }
 
   .actualizacionsTitle {
-    font-size: 23px;
+    font-size: 20px;
   }
 
   .actualizacionsDate {
     font-size: 13px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    grid-row: 5;
+    grid-column: 1;
   }
   .actualizacionsDescription {
     font-size: 13px;
@@ -98,5 +112,7 @@
   .botonActualizacions {
     font-size: 13px;
     padding: 0;
+    grid-row: 6;
+    grid-column: 1;
   }
 }
