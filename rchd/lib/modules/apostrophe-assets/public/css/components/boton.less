@@ -4,10 +4,11 @@
   justify-content: center;
   align-items: center;
   .boton {
-    background-color: orange;
-    width: 100px;
+    background-color: @rchdAnaranjado;
+    min-width: 100px;
+    max-width: auto;
     height: 30px;
-    border-radius: 10%;
+    border-radius: 10px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -16,5 +17,11 @@
     color: black;
     font-family: @font-family-body;
     border: none;
+    padding: 4px;
+  }
+
+  .boton:hover {
+    border: 1px solid @rchdAnaranjado;
+    box-shadow: 0 0 10px #fba017;
   }
 }

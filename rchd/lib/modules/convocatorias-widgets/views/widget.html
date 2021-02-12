@@ -1,0 +1,14 @@
+{% for piece in data.widget._pieces %}
+<div class="gridConvocatoria">
+  <div class="convocatoriaTitle">{{ piece.title }}</div>
+  <div class="convocatoriaDate">{{piece.date}}</div>
+  <div class="convocatoriaDescription">{{ piece.description }}</div>
+  <div class="contenedorBotonConvocatoria">
+
+    <div class="botonConvocatoria">
+      <a href="{{piece.pageUrl}}" class="linkConvocatoria">Conoce más</a>
+    </div>
+  </div>
+  
+</div>
+{% endfor %}

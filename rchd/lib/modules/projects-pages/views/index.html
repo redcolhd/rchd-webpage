@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block title %}{{ data.page.title }}{% endblock %}
+{% block main %}
+
+<div class="members-section">
+  <!-- Header -->
+  <div>{{ apos.singleton(data.page, 'header', 'header', { }) }}</div>
+  <div class="seccion-barra-nuevoProyecto">
+    <!-- Barra de búsqueda -->
+    <div class="contenedor-busqqueda-tag">
+      <div class="contenedor-busqueda">
+        <ul class="tag-filters">
+          <li>
+            <a href="#" class="opcionCategorias">
+              <div class="labelCategotias">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.5em"
+                  height="1.5em"
+                  viewBox=" 24 24"
+                >
+                  <path
+                    d="M15 12a1 1 0 1 0 1-1a1 1 0 0 0-1 1zm6.71-.71l-5-5A1 1 0 0 0 16 6H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h11a1 1 0 0 0 .71-.29l5-5a1 1 0 0 0 0-1.42zM15.59 16H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h10.59l4 4z"
+                    fill="white"
+                  />
+                </svg>
+                <div class="icono-desaparece-sm">Categorias</div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.5em"
+                  height="1.5em"
+                  viewBox="20 20"
+                >
+                  <path d="M5 6l5 5l5-5l2 1l-7 7l-7-7z" fill="white" />
+                </svg>
+              </div>
+            </a>
+            <ul>
+              {% for field in data.piecesFilters.fieldsOfInterest %}
+              <li>
+                <a
+                  class="opcion"
+                  href="{{ data.url | build({ fieldsOfInterest: field.value }) }}"
+                  >{{ field.label }}</a
+                >
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Fin Barra de búsqueda -->
+
+    <div class="nuevoProyecto">
+      {{ apos.singleton(data.page, 'link', 'link', { }) }}
+    </div>
+  </div>
+
+  <!-- Grid Proyectos -->
+  <div class="proyectos-container">
+    {% for piece in data.pieces %}
+    <div class="proyecto-cuadro">
+      {% set image = apos.images.first(piece.projectImage) %} {% if image %}
+      <div class="proyecto-cuadro-img">
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+      </div>
+      {% endif %}
+      <div class="proyecto-cuadro-overlay"></div>
+      <div class="proyecto-cuadro-nombre">
+        <a href="{{ piece._url }}">{{ piece.title }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% if data.currentPage < data.totalPages %} {# "Load More" button with the
+"append=1" flag #}
+<a href="{{ data.url | build({ page: data.currentPage + 1, append: 1 }) }}"
+  >Load More...</a
+>
+{% endif %} {% endblock %}

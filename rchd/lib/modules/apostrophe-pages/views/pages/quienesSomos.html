@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block main %}
+
+<div class="gridQuienesSomos">
+  <div class="imagenFondo" id="imagenFondoQS"></div>
+  <div class="imagenLogo">
+    {{ apos.singleton(data.page, 'imagenLogo', 'apostrophe-images', { limit: 1,
+    size: 'full' }) }}
+  </div>
+  <div class="tituloQuienesSomos">
+    {{ apos.singleton(data.page, 'textoTitulo', 'apostrophe-rich-text', { }) }}
+  </div>
+  <div class="textoQuienesSomos">
+    {{ apos.singleton(data.page, 'texto', 'apostrophe-rich-text', { }) }} {{
+    apos.singleton(data.page, 'boton', 'boton', { }) }}
+  </div>
+</div>
+
+<div class="tituloColaboradores">
+  {{ apos.singleton(data.page, 'textoTituloAliados', 'apostrophe-rich-text', {
+  }) }}
+</div>
+
+<div class="colaboradores">
+  {{ apos.area(data.page, 'colaboradores', { widgets: { boton:{},
+  'apostrophe-rich-text':{ toolbar: [ 'Styles', 'Bold', 'Italic' ], styles: [ {
+  name: 'Heading', element: 'h3' }, { name: 'Subheading', element: 'h5' }, {
+  name: 'Paragraph', element: 'p' } ] } } }) }}
+</div>
+
+{%endblock%}

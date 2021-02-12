@@ -1,0 +1,16 @@
+<div class="miembros-container">
+    {% for piece in data.widget._pieces  %}
+    <div class="aliado">
+        <div class="aliado-imagen">
+          {% set image = apos.images.first(piece.photo) %}
+          {% if image %}
+          <img src="{{ apos.attachments.url(image, { size: 'one-third' }) }}" alt="prueba">
+          {% endif %}
+        </div>
+        <div class="aliado-overlay"></div>
+        <div class="aliado-nombre">
+          {{ piece.title }}
+        </div>
+    </div>
+    {% endfor %} 
+</div>

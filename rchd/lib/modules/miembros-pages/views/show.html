@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block title %}{{ data.piece.title }}{% endblock
+%} {% block main %}
+<div class="headerMiembro" >
+  <div class="imagenFondoHeader" id="imagenFondoHeader"></div>
+  <div class="tituloMiembro" id="tituloMiembro">{{data.piece.name}}</div>
+</div>
+
+<div class="contenidoMiembro">
+  <div class="contenidoIzquierdaMiembro">
+    {% set image = apos.images.first(data.piece.photo) %} {% if image %}
+    <img
+      class="imagenMiembro"
+      src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"
+    />
+    {% endif %}
+    <div class="colorAzul">Perfil profesional</div>
+    <div class="textoPerfil">{{data.piece.education}}</div>
+    <div class="textoPerfil">{{data.piece.institutionalMembership}}</div>
+    <div class="botonMiembro">
+      <a href="{{data.piece.socialMedia}}" class="linkMiembro">Contacto</a>
+    </div>
+  </div>
+  <div class="contenidoDerechaMiembro">
+    <div class="navPanelMiembro">
+      <div class="circuloMiembro proyectosButton activeCirculoMiembro">Proyectos</div>
+      <div class="circuloMiembro practicaButton">Campos</br>de</br>práctica</div>
+      <div class="circuloMiembro interesesButton">Campos</br>de</br>interés</div>
+    </div>
+    <div>
+      <div class="espacioPanelesMiembro">
+        <div class="panelMiembro miembroProyectos">
+          {% if data.piece._projects %} {% for project in data.piece._projects
+          %}
+          <div class="elementoProyecto">
+            <a class="projectName" href="{{ project._url }}"
+              >{{project.projectName}}</a
+            >
+            <div class="projectAuthors">{{project.projectAuthors}}</div>
+            <div class="projectDescription">{{project.projectDescription}}</div>
+          </div>
+          {% endfor %} {% endif %}
+        </div>
+        <div class="panelMiembro miembroPractica panelOculto">
+          {% for interest in data.piece.fieldsOfKnowledge %}
+          <div class="elementoPanelM">{{interest}}</div>
+          {% endfor %}
+        </div>
+        <div class="panelMiembro miembroIntereses panelOculto">
+          {% for interest in data.piece.fieldsOfInterest %}
+          <div class="elementoPanelM">{{interest}}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

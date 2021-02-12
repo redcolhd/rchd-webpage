@@ -1,0 +1,29 @@
+{% macro render(home, currentPage) %}
+<div class="footer">
+  <div class="footer_nav">
+    <ul class="c-navigation__items">
+      {% for tab in home._children %}
+      <li
+        class="c-navigation__item {% if currentPage and (apos.pages.isAncestorOf(tab, currentPage) or tab._id == currentPage._id) %} c-navigation__item--active {% endif %}"
+      >
+        <a class="o-body c-navigation__link fuenteFooter" href="{{ tab._url }}">
+          {{ tab.title }}{% if options.arrows and tab._children.length > 0 %}{{
+          svgs.navArrow() }}{% endif %}
+        </a>
+        {% if tab._children.length > 0 and options.arrows %}
+        <ul class="o-body c-navigation__item__subnav" aria-label="subnav">
+          {% for child in tab._children %}
+          <li><a href="{{ child._url }}">{{ child.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="textoFooter fuenteFooter">
+    <div class="ccLogo">CC</div>
+    <div class="RCHDFooter">2020. Red Colombiana de Humanidades Digitales</div>
+  </div>
+</div>
+{% endmacro %}

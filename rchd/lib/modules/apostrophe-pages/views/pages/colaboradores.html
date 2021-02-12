@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block main %}
+<div>{{ apos.singleton(data.page, 'header', 'header', { }) }}</div>
+<div class="container-colaboradores">
+    <div> 
+        {{ apos.area(data.page, 'body', { 
+            widgets: {
+                'apostrophe-rich-text': {
+                    toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink' ], 
+                    styles: [
+                        { 
+                            element: 'div',
+                            name: 'Titulo',
+                            attributes: { class: 'titulo-colaboradores'}
+                        }, 
+                        { 
+                            element: 'div',
+                            name: 'Subtitulo',
+                            attributes: { class: 'subtitulo-colaboradores'}
+                        }, 
+                        {
+                            element: 'div',
+                            name: 'Parrafo',
+                            attributes: { class: 'parrafo-colaboradores'}
+                        },
+                        {
+                            element: 'div',
+                            name: 'Lista',
+                            attributes: { class: 'lista-colaboradores'}
+                        }
+                    ]
+                }
+            }
+        }) }}
+    </div>
+</div>
+{% endblock %}

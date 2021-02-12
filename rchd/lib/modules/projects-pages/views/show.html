@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% block title %}{{ data.piece.title }}{% endblock
+%} {% block main %}
+
+<div class="headerProyecto" id="imagenFondoHeader">
+  <div class="tituloProyecto">{{data.piece.title}}</div>
+</div>
+
+<div class="contenidoProyecto">
+  <div class="contenidoIzquierdaProyecto">
+    {% set image = apos.images.first(data.piece.projectImage) %} {% if image %}
+    <img
+      class="imagenProyecto"
+      src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"
+    />
+    {% endif %}
+    <div class="botonProyecto">
+      <a href="{{data.piece.projectUrl}}" class="linkProyecto">Contacto</a>
+    </div>
+  </div>
+
+  <div class="contenidoDerechaProyecto">
+    <div class="TituloContenidoProyecto">Descripción</div>
+    <div class="contenidoDescripcionProyecto">
+      {{data.piece.projectDescription}}
+    </div>
+    <div class="TituloContenidoProyecto" id="autoresTitle">Autores</div>
+    <div class="contenidoDescripcionProyecto">
+      {{data.piece.projectAuthors}}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

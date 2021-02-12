@@ -1,9 +1,6 @@
-<div class="contenedor-titulo-imagen">
-  <div class="imagen-fondo-titulo">
-    {{ apos.singleton(data.widget, 'image', 'apostrophe-images',
-    {size:'one-sixth'}) }}
-  </div>
-  <div class="texto-titulo">
+<div class="contenedor-header">
+  <div class="imagen-fondo-titulo" id="imagenFondoHeader"></div>
+  <div class="texto-tituloHeader">
     {{ apos.area(data.widget, 'titulo', { widgets: { 'apostrophe-rich-text': {}
     } }) }}
   </div>

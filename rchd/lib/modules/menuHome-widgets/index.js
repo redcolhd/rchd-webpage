@@ -1,10 +1,10 @@
 module.exports = {
   extend: "apostrophe-widgets",
-  label: "FooterPagina",
+  label: "Menuhome",
   addFields: [
     {
-      name: "image",
-      label: "image",
+      name: "imagen",
+      label: "Imagen",
       type: "singleton",
       widgetType: "apostrophe-images",
       options: {
@@ -13,10 +13,19 @@ module.exports = {
         size: "one-sixth",
       },
     },
+
     {
       name: "titulo",
-      type: "area",
+      type: "string",
       label: "Titulo",
+    },
+    {
+      name: "_page",
+      type: "joinByOne",
+      withType: "apostrophe-page",
+      label: "Page",
+      required: true,
+      idField: "pageId",
     },
   ],
 };

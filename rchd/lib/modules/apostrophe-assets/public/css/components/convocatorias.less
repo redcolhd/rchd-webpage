@@ -1,0 +1,41 @@
+.contenido-pagina-convocatorias {
+  display: grid;
+  grid-template-columns: 70vw 29vw;
+  gap: 1vw;
+  margin-bottom: 2px;
+}
+
+.columna-uno-convocatorias {
+  padding: 1%;
+  width: 100%;
+  height: 70vh;
+  overflow: scroll;
+}
+
+.columna-dos-convocatorias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  padding: 1vh;
+}
+@media only screen and (max-width: 720px) {
+  .contenido-pagina-convocatorias {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+  }
+  .columna-uno-convocatorias {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .columna-dos-convocatorias {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+  }
+}

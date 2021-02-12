@@ -1,0 +1,285 @@
+.contenedorNav {
+  display: grid;
+  grid-template-rows: 7vh 93vh;
+  position: absolute;
+  right: -135px;
+}
+
+.indexNav {
+  z-index: 10;
+  transition: z-index 0.5s step-end;
+}
+
+.indexModified {
+  z-index: 50;
+  transition: z-index 0.5s step-start;
+}
+
+ul {
+  list-style: none;
+}
+
+.navIcon {
+  grid-row: 1;
+  top: 5vh;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border: solid 2px @rchdGrisClaro;
+  background: black;
+  border-radius: 9px;
+  position: relative;
+  z-index: 20;
+}
+
+.navIcon:hover {
+  box-shadow: 0 0 10px @rchdAzul;
+}
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  top: 0.2vh;
+  height: 1vh;
+  width: 1vh;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  background: rgba(40, 40, 40, 0.2);
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  z-index: 1;
+}
+
+.checkbox:checked {
+  background: @rchdGris;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  visibility: hidden;
+}
+
+.hamburger,
+.navIcon,
+.hidden {
+  cursor: pointer;
+}
+
+.menu_shown .menu__icon span {
+  background: transparent;
+}
+
+.menu_shown .menu__icon:before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.menu_shown .menu__icon:after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.mobile.menuTabs {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  z-index: 10;
+  width: 17vw;
+  min-height: 100vh;
+  top: 0;
+  background: rgba(0, 0, 0, 0.904);
+  transition: all 0.7s ease-in-out;
+  transform: translateX(7vw);
+}
+
+.menu_shown .mobile.menuTabs {
+  transform: translateX(-130px);
+  visibility: visible;
+}
+
+.mobile .menu__item {
+  display: block;
+  line-height: 2;
+  padding: 5px;
+}
+
+.menu__item {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: @font-family-display;
+}
+
+.itemHomeNav {
+  color: @rchdAzul;
+  letter-spacing: 7px;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.mobile .menu__item:hover {
+  display: block;
+  line-height: 2;
+  background-color: @rchdAzul;
+  color: black;
+  padding: 5px;
+}
+
+.hamburger {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: @rchdGris;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.bar2,
+.bar3,
+.bar4,
+.hamIcon {
+  top: 13.5px;
+}
+
+.hamIcon .bar5 {
+  bottom: 0px;
+}
+
+.hamIcon .bar {
+  transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.hamIcon .bar2 {
+  width: 1px;
+  transform: rotate(90deg);
+  left: 13.5px;
+}
+
+.hamIcon .bar3 {
+  width: 1px;
+  left: 13.5px;
+}
+
+.checkbox:checked {
+  background: rgba(40, 40, 40, 0.7);
+}
+
+.checkbox:checked + label > .hamIcon > .bar1 {
+  top: 13.5px;
+  background-color: transparent;
+}
+
+.checkbox:checked + label > .hamIcon > .bar2 {
+  left: 0px;
+  width: 30px;
+  transform: rotate(45deg);
+}
+
+.checkbox:checked + label > .hamIcon > .bar3 {
+  left: 0;
+  width: 30px;
+  transform: rotate(-45deg);
+}
+
+.checkbox:checked + label > .hamIcon > .bar4 {
+  background-color: transparent;
+}
+
+.checkbox:checked + label > .hamIcon > .bar5 {
+  bottom: 13.5px;
+  background-color: transparent;
+}
+
+.contenedorTabs {
+  grid-column: 2;
+  background: black;
+}
+
+.pressedIcon {
+  background: rgb(63, 59, 59);
+  box-shadow: 0 0 10px @rchdAnaranjado;
+}
+
+@media only screen and (max-width: 600px) {
+  .navIcon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .contenedorNav {
+    width: 190px;
+    right: -130px;
+  }
+
+  .menu_shown .mobile.menuTabs {
+    transform: translateX(-170px);
+    display: block;
+  }
+  .bar2,
+  .bar3,
+  .bar4,
+  .hamIcon {
+    top: 12px;
+  }
+
+  .mobile.menuTabs {
+    width: 200px;
+    height: 100vh;
+    padding-top: 100px;
+    display: none;
+  }
+
+  .hamburger {
+    margin-top: -8px;
+    margin-left: -10px;
+    width: 20px;
+  }
+
+  .hamIcon .bar5 {
+    bottom: 5px;
+  }
+
+  .bar1 {
+    top: 3px;
+  }
+
+  .hamburger .bar {
+    height: 3px;
+  }
+}

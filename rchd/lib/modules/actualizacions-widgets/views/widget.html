@@ -1,0 +1,15 @@
+{% for piece in data.widget._pieces %}
+<div class="gridActualizacions">
+  <div class="actualizacionsType">{{ piece.typeOfUpdate }}</div>
+  <div class="postDate">Fecha de publicación</div>
+  <div class="actualizacionsTitle">{{ piece.title }}</div>
+  <div class="actualizacionsDate">{{piece.date}}</div>
+  <div class="actualizacionsDescription">{{ piece.description }}</div>
+  <div class="contenedorBotonActualizaciones">
+
+    <div class="botonActualizacions">
+      <a href="{{piece.pageUrl}}" class="linkActualizacions">Conoce más</a>
+    </div>
+  </div>
+</div>
+{% endfor %}

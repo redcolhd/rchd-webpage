@@ -34,8 +34,49 @@ var apos = require("apostrophe")({
       viewsFolderFallback: path.join(__dirname, "views"),
     },
     "header-widgets": {},
+    "link-widgets": {},
     "red-social-widgets": {},
     "boton-widgets": {},
     "footerPagina-widgets": {},
+    "two-column-widgets": {},
+    convocatorias: {},
+    "convocatorias-widgets": {
+      extend: "apostrophe-pieces-widgets",
+    },
+    "twitter-widgets": {},
+    miembros: {},
+    "miembros-pages": {
+      extend: "apostrophe-pieces-pages",
+    },
+    "comite-miembros": {},
+    "comite-miembros-widgets": {
+      extend: "apostrophe-pieces-widgets"
+    },
+    actualizacions: {},
+    "actualizacions-widgets": {
+      extend: "apostrophe-pieces-widgets",
+    },
+    "menuHome-widgets": {},
+    "aliados": {},
+    "aliados-widgets": {
+      extend: 'apostrophe-pieces-widgets'
+    },
+    "projects": {},
+    'projects-pages': {
+      extend: 'apostrophe-pieces-pages'
+    }
   },
+  "apostrophe-pages": {
+    filters: {
+      // Grab our ancestor pages, with two levels of subpages
+      ancestors: {
+        children: {
+          depth: 2,
+        },
+      },
+      // We usually want children of the current page, too
+      children: true,
+    },
+    // other apostrophe-pages options like `types` ...
+  }
 });
