@@ -5,15 +5,15 @@ let particles = [];
 let mySketch;
 let divfondo;
 let urlactual = window.location.href;
-let domain = "http://localhost:3000/";
-
+let domain = "http://rehdi.co";
+let ip = "http://192.169.232.101:3002";
 
 function setup(type) {
-  if (urlactual == domain) {
+  if (urlactual == domain || urlactual == ip) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoH");
   }
-  else if (urlactual == `${domain}quienes-somos`) {
+  else if (urlactual == `${domain}quienes-somos` || urlactual == `${ip}quienes-somos`) {
     if (screen.width > 600) {
           mySketch = createCanvas(screen.width, screen.height*1.3, WEBGL);
         }
@@ -22,7 +22,7 @@ function setup(type) {
         }
      mySketch.parent("imagenFondoQS");
   }
-  else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true) {
+  else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true || urlactual == `${ip}miembros` ) {
     if (screen.width<600){
       mySketch = createCanvas(screen.width, screen.height*1.2, WEBGL);
     }else{
@@ -38,7 +38,13 @@ function setup(type) {
     urlactual == `${domain}contacto` ||
     urlactual == `${domain}convocatorias` ||
     urlactual == `${domain}proyectos`||
-    urlactual.includes("/proyectos/") == true 
+    urlactual.includes("/proyectos/") == true ||
+    urlactual == `${ip}comite-base-historico` ||
+    urlactual == `${ip}colaboradores` ||
+    urlactual == `${ip}actualizaciones` ||
+    urlactual == `${ip}contacto` ||
+    urlactual == `${ip}convocatorias` ||
+    urlactual == `${ip}proyectos`
   ) {
     mySketch = createCanvas(screen.width, screen.height * 0.2, WEBGL);
     mySketch.parent("imagenFondoHeader");
@@ -67,7 +73,13 @@ function draw() {
   urlactual == `${domain}contacto` ||
   urlactual == `${domain}convocatorias`||
   urlactual == `${domain}proyectos`||
-  urlactual.includes("/proyectos/") == true ){
+  urlactual.includes("/proyectos/") == true ||
+  urlactual == `${ip}comite-base-historico` ||
+  urlactual == `${ip}colaboradores` ||
+  urlactual == `${ip}actualizaciones` ||
+  urlactual == `${ip}contacto` ||
+  urlactual == `${ip}convocatorias`||
+  urlactual == `${ip}proyectos`){
     angle += 0.002;
   }
   else {
@@ -89,6 +101,12 @@ function makeParticles(type) {
       urlactual == `${domain}contacto` ||
       urlactual == `${domain}convocatorias`||
       urlactual == `${domain}proyectos`||
+      urlactual == `${ip}comite-base-historico` ||
+      urlactual == `${ip}colaboradores` ||
+      urlactual == `${ip}actualizaciones` ||
+      urlactual == `${ip}contacto` ||
+      urlactual == `${ip}convocatorias`||
+      urlactual == `${ip}proyectos` ||
       urlactual.includes("/proyectos/") == true ) 
     {
        if (screen.width > 600)
@@ -103,8 +121,8 @@ function makeParticles(type) {
         }
       } 
     
-      else if (urlactual == `${domain}miembros` || urlactual.includes("miembros?") == true
-      || urlactual == `${domain}quienes-somos`|| urlactual == domain) {
+      else if (urlactual == `${domain}miembros` || urlactual == `${ip}miembros` || urlactual.includes("miembros?") == true
+      || urlactual == `${domain}quienes-somos`|| urlactual == domain || urlactual == `${ip}quienes-somos`|| urlactual == ip) {
            if (screen.width > 600)
           {
              v.mult(6000);
