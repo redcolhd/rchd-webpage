@@ -8,13 +8,14 @@ var apos = require("apostrophe")({
   // configuring user accounts.
 
   modules: {
+
     'apostrophe-db': {
-      // uri: 'mongodb://localhost:27017/apostrophe-sandbox'
+      uri: 'mongodb://localhost:27017/rchd'
       // There is legacy support for host, port, name, user and password options,
       // but this is not necessary. They can all go in the uri option like this:
-      uri: 'mongodb://rchd:R3d3$Hum4n4$@localhost:27017/rchd'
+      // uri: 'mongodb://rchd:R3d3$Hum4n4$@localhost:27017/rchd'
     }, 
-
+    
     "apostrophe-forms": {
       optionLabelPosition: "last",
       classPrefix: "my-form",
