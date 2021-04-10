@@ -26,7 +26,7 @@ else
   PORT=`cat ../../../*/data/port 2>/dev/null | tr " " "\n" | sort -n | tail -1`
   if [ "$PORT" == "" ]; then
   	echo "First app ever, assigning port 3000"
-  	PORT=3000
+  	PORT=3002
   else
     # Bash is much nicer than sh! We can do math without tears!
     let PORT+=1
