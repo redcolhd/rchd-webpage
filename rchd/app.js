@@ -2,7 +2,7 @@ var path = require("path");
 
 var apos = require("apostrophe")({
   shortName: "rchd",
-
+  prefix: '/rchdtest',
   // See lib/modules for basic project-level configuration of our modules
   // responsible for serving static assets, managing page templates and
   // configuring user accounts.
@@ -16,6 +16,11 @@ var apos = require("apostrophe")({
       uri: 'mongodb://rchd:R3d3$Hum4n4$@localhost:27017/rchd'
     }, 
     
+    "apostrophe-assets: {
+	minify: true
+
+    },
+
     "apostrophe-forms": {
       optionLabelPosition: "last",
       classPrefix: "my-form",
