@@ -1,11 +1,11 @@
-let totalParticles = 5000;
+let totalParticles = 1000;
 let v;
 let angle = 0;
 let particles = [];
 let mySketch;
 let divfondo;
 let urlactual = window.location.href;
-let domain = "http://rehdi.co";
+let domain = "https://hd.uniandes.edu.co/rchdtest/";
 let ip = "http://192.169.232.101:3002";
 
 function setup(type) {
@@ -13,7 +13,7 @@ function setup(type) {
     mySketch = createCanvas(screen.width, screen.height, WEBGL);
     mySketch.parent("imagenFondoH");
   }
-  else if (urlactual == `${domain}quienes-somos` || urlactual == `${ip}quienes-somos`) {
+  else if (urlactual == `${domain}quienes-somos` || urlactual == `${ip}quienes-somos` || urlactual.includes("quienes?")) {
     if (screen.width > 600) {
           mySketch = createCanvas(screen.width, screen.height*1.3, WEBGL);
         }
@@ -36,6 +36,7 @@ function setup(type) {
     urlactual == `${domain}colaboradores` ||
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
+    urlactual == `${domain}noticias` ||
     urlactual == `${domain}convocatorias` ||
     urlactual == `${domain}proyectos`||
     urlactual.includes("/proyectos/") == true ||
@@ -43,6 +44,7 @@ function setup(type) {
     urlactual == `${ip}colaboradores` ||
     urlactual == `${ip}actualizaciones` ||
     urlactual == `${ip}contacto` ||
+    urlactual == `${ip}noticias` ||
     urlactual == `${ip}convocatorias` ||
     urlactual == `${ip}proyectos`
   ) {
@@ -55,7 +57,7 @@ function setup(type) {
   }
   
   makeParticles(type);
-  frameRate(180);
+  frameRate(10);
 }
 
 function draw() {
@@ -73,11 +75,13 @@ function draw() {
   urlactual == `${domain}contacto` ||
   urlactual == `${domain}convocatorias`||
   urlactual == `${domain}proyectos`||
+  urlactual == `${domain}noticias`||
   urlactual.includes("/proyectos/") == true ||
   urlactual == `${ip}comite-base-historico` ||
   urlactual == `${ip}colaboradores` ||
   urlactual == `${ip}actualizaciones` ||
   urlactual == `${ip}contacto` ||
+  urlactual == `${ip}noticias` ||
   urlactual == `${ip}convocatorias`||
   urlactual == `${ip}proyectos`){
     angle += 0.002;
@@ -89,7 +93,7 @@ function draw() {
 
 function makeParticles(type) {
   
-  type == true ? totalParticles = 0 : totalParticles = 5000;
+  type == true ? totalParticles = 0 : totalParticles = 1000;
 
   for (let i = 0; i < totalParticles; i++) {
     v = p5.Vector.random3D();
@@ -103,6 +107,8 @@ function makeParticles(type) {
       urlactual == `${domain}proyectos`||
       urlactual == `${ip}comite-base-historico` ||
       urlactual == `${ip}colaboradores` ||
+      urlactual == `${domain}noticias`||
+      urlactual == `${ip}noticias`||
       urlactual == `${ip}actualizaciones` ||
       urlactual == `${ip}contacto` ||
       urlactual == `${ip}convocatorias`||
@@ -111,13 +117,13 @@ function makeParticles(type) {
     {
        if (screen.width > 600)
         {
-          v.mult(1200);
-          totalParticles = 800;
+          v.mult(600);
+          totalParticles = 300;
         }
       else if (screen.width <= 600)
         {
-          v.mult(900);
-          totalParticles = 600;
+          v.mult(600);
+          totalParticles = 150;
         }
       } 
     
@@ -125,15 +131,15 @@ function makeParticles(type) {
       || urlactual == `${domain}quienes-somos`|| urlactual == domain || urlactual == `${ip}quienes-somos`|| urlactual == ip) {
            if (screen.width > 600)
           {
-             v.mult(6000);
+             v.mult(1000);
           }
       else if (screen.width <= 600)
           {
-            v.mult(1200);
+            v.mult(500);
           }
     } 
       else {
-      v.mult(6000);
+      v.mult(1000);
     }
 
     particles.push(v);
