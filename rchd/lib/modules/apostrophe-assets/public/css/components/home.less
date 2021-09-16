@@ -7,8 +7,8 @@
 }
 .gridHome {
   display: grid;
-  grid-template-rows: 8vh 13vh 13vh 16vh 16vh 13vh 13vh 8vh;
-  grid-template-columns: 10vw 14vw 14vw 14vw 14vw 14vw 14vw 6vw;
+  grid-template-rows: 6vh 10vh 12vh 14vh 16vh 14vh 12vh 10vh 6vh;
+  grid-template-columns: 20vw 10vw 12vw 10vw 10vw 42vw;
 }
 .imagenFondoH {
   grid-row-start: 1;
@@ -19,16 +19,13 @@
 }
 .imagenLogoRed {
   grid-row-start: 3;
-  grid-row-end: 7;
   grid-column-start: 4;
-  grid-column-end: 7;
   width: 50vw;
   height: 66vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -4vh;
-  maegin-left: -4vw;
+  margin-left: -8vw;
   .imagenRedHome {
     display: flex;
     justify-content: center;
@@ -36,49 +33,48 @@
   }
 }
 .menu {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 4;
-  grid-column-end: 5;
+  grid-row: 2;
+  grid-column: 4;
   display: flex;
   align-items: center;
   justify-content: start;
 }
 .menu2 {
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row: 3;
   grid-column-start: 3;
-  grid-column-end: 4;
   display: flex;
   justify-content: flex-end;
 }
 .menu3 {
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row: 4;
   grid-column-start: 3;
   grid-column-end: 4;
   display: flex;
   justify-content: start;
 }
 .menu4 {
-  grid-row-start: 5;
-  grid-row-end: 6;
+  grid-row: 5;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu5 {
+  grid-row: 6;
   grid-column-start: 3;
   grid-column-end: 4;
   display: flex;
   justify-content: start;
 }
-.menu5 {
-  grid-row-start: 6;
-  grid-row-end: 7;
+.menu6 {
+  grid-row: 7;
   grid-column-start: 3;
   grid-column-end: 4;
   display: flex;
   justify-content: flex-end;
 }
-.menu6 {
-  grid-row-start: 7;
-  grid-row-end: 8;
+.menu7 {
+  grid-row: 8;
   grid-column-start: 4;
   grid-column-end: 5;
   display: flex;

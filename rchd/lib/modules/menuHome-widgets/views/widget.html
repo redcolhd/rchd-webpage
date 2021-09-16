@@ -1,4 +1,5 @@
 <div class="contenidorMenuHome">
+  {% set urlInterna = data.widget._page._url %} {% if urlInterna %}
   <div class="imagenMenu">
    <a href="{{ data.widget._page._url }}">
     <div class="imagenOpciones">
@@ -9,4 +10,17 @@
   <div class="linkMenu">
     <a href="{{ data.widget._page._url }}">{{data.widget.titulo}}</a>
   </div>
+  {% endif %}
+  {% set urlExterna = data.widget.ext_url %} {% if urlExterna %}
+  <div class="imagenMenu">
+    <a href="{{ data.widget.ext_url }}">
+     <div class="imagenOpciones">
+       {{ apos.singleton(data.widget, 'imagen', 'apostrophe-images', {}) }}
+     </div>
+     </a>
+   </div>
+   <div class="linkMenu">
+    <a href="{{ data.widget.ext_url }}">{{data.widget.titulo}}</a>
+  </div>
+    {% endif %}
 </div>

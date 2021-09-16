@@ -23,9 +23,15 @@ module.exports = {
       name: "_page",
       type: "joinByOne",
       withType: "apostrophe-page",
-      label: "Page",
-      required: true,
+      label: "URL a página interna",
+      required: false,
       idField: "pageId",
+    },
+    {
+      name: "ext_url",
+      type: "url",
+      label: "URL externa",
+      required: false,
     },
   ],
 };
