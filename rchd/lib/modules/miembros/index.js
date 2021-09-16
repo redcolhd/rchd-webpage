@@ -42,8 +42,8 @@ module.exports = {
       widgetType: 'apostrophe-images',
       options: {
         limit: 1,
-        minSize: [ 200, 200 ],
-        aspectRatio: [ 1, 1 ]
+        minSize: [200, 200],
+        aspectRatio: [1, 1]
       },
       required: true
     },
@@ -55,7 +55,7 @@ module.exports = {
     },
     {
       name: 'socialMedia',
-      label: '¿Algún link a redes sociales o académicas',
+      label: '¿Algún link a redes sociales o académicas?',
       type: 'string',
       required: false
     },
@@ -72,16 +72,72 @@ module.exports = {
       type: 'checkboxes',
       choices: [
         {
-          label: 'Esta es una prueba mas larga',
-          value: 'Esta es una prueba mas larga'
+          label: 'Teoría e Historia de las Humanidades Digitales',
+          value: 'Teoría e Historia de las Humanidades Digitales'
         },
         {
-          label: 'Prueba2',
-          value: 'prueba2'
+          label: 'Metodologías digitales para estudios literarios, lingüísticos, análisis de texto, entre otros',
+          value: 'Metodologías digitales para estudios literarios, lingüísticos, análisis de texto, entre otros'
         },
         {
-          label: 'Prueba3',
-          value: 'prueba3'
+          label: 'Metodologías digitales para estudios arqueológicos o arquitectónicos',
+          value: 'Metodologías digitales para estudios arqueológicos o arquitectónicos'
+        },
+        {
+          label: 'Historia digital del arte',
+          value: 'Historia digital del arte'
+        },
+        {
+          label: 'Historia Digital',
+          value: 'Historia Digital'
+        },
+        {
+          label: 'Sistemas de información geográfica',
+          value: 'Sistemas de información geográfica'
+        },
+        {
+          label: 'Aproximaciones digitales al arte, literatura, cine, música, entre otros',
+          value: 'Aproximaciones digitales al arte, literatura, cine, música, entre otros'
+        },
+        {
+          label: 'Videojuegos',
+          value: 'Videojuegos'
+        },
+        {
+          label: 'Cultura Hacker',
+          value: 'Cultura Hacker'
+        },
+        {
+          label: 'Patrimonio Cultural Digital',
+          value: 'Patrimonio Cultural Digital'
+        },
+        {
+          label: 'Bibliotecas, museo y archivos digitales',
+          value: 'Bibliotecas, museo y archivos digitales'
+        },
+        {
+          label: 'Edición, publicación y diseño digital o colaborativo',
+          value: 'Edición, publicación y diseño digital o colaborativo'
+        },
+        {
+          label: 'Big Data e inteligencia artificial',
+          value: 'Big Data e inteligencia artificial'
+        },
+        {
+          label: 'Estudios de medios y periodismo digital',
+          value: 'Estudios de medios y periodismo digital'
+        },
+        {
+          label: 'Activismo Digital',
+          value: 'Activismo Digital'
+        },
+        {
+          label: 'Narrativas Digitales',
+          value: 'Narrativas Digitales'
+        },
+        {
+          label: 'Realidad virtual y aumentada',
+          value: 'Realidad virtual y aumentada'
         }
       ]
     },
@@ -92,16 +148,72 @@ module.exports = {
       type: 'checkboxes',
       choices: [
         {
-          label: 'Esta es una prueba mas larga',
-          value: 'Esta es una prueba mas larga'
+          label: 'Teoría e Historia de las Humanidades Digitales',
+          value: 'Teoría e Historia de las Humanidades Digitales'
         },
         {
-          label: 'Prueba2',
-          value: 'prueba2'
+          label: 'Metodologías digitales para estudios literarios, lingüísticos, análisis de texto, entre otros',
+          value: 'Metodologías digitales para estudios literarios, lingüísticos, análisis de texto, entre otros'
         },
         {
-          label: 'Prueba3',
-          value: 'prueba3'
+          label: 'Metodologías digitales para estudios arqueológicos o arquitectónicos',
+          value: 'Metodologías digitales para estudios arqueológicos o arquitectónicos'
+        },
+        {
+          label: 'Historia digital del arte',
+          value: 'Historia digital del arte'
+        },
+        {
+          label: 'Historia Digital',
+          value: 'Historia Digital'
+        },
+        {
+          label: 'Sistemas de información geográfica',
+          value: 'Sistemas de información geográfica'
+        },
+        {
+          label: 'Aproximaciones digitales al arte, literatura, cine, música, entre otros',
+          value: 'Aproximaciones digitales al arte, literatura, cine, música, entre otros'
+        },
+        {
+          label: 'Videojuegos',
+          value: 'Videojuegos'
+        },
+        {
+          label: 'Cultura Hacker',
+          value: 'Cultura Hacker'
+        },
+        {
+          label: 'Patrimonio Cultural Digital',
+          value: 'Patrimonio Cultural Digital'
+        },
+        {
+          label: 'Bibliotecas, museo y archivos digitales',
+          value: 'Bibliotecas, museo y archivos digitales'
+        },
+        {
+          label: 'Edición, publicación y diseño digital o colaborativo',
+          value: 'Edición, publicación y diseño digital o colaborativo'
+        },
+        {
+          label: 'Big Data e inteligencia artificial',
+          value: 'Big Data e inteligencia artificial'
+        },
+        {
+          label: 'Estudios de medios y periodismo digital',
+          value: 'Estudios de medios y periodismo digital'
+        },
+        {
+          label: 'Activismo Digital',
+          value: 'Activismo Digital'
+        },
+        {
+          label: 'Narrativas Digitales',
+          value: 'Narrativas Digitales'
+        },
+        {
+          label: 'Realidad virtual y aumentada',
+          value: 'Realidad virtual y aumentada'
         }
       ]
     },
@@ -118,16 +230,24 @@ module.exports = {
       type: 'checkboxes',
       choices: [
         {
-          label: 'Prueba',
-          value: 'prueba'
+          label: 'Diseño web',
+          value: 'Diseño web'
         },
         {
-          label: 'Prueba2',
-          value: 'prueba2'
+          label: 'Mantenimiento web',
+          value: 'Mantenimiento web'
         },
         {
-          label: 'Prueba3',
-          value: 'prueba3'
+          label: 'Blog',
+          value: 'Blog'
+        },
+        {
+          label: 'Evaluación de pares',
+          value: 'Evaluación de pares'
+        },
+        {
+          label: 'Contenidos en Redes Sociales',
+          value: 'Contenidos en Redes Sociales'
         }
       ]
     },
@@ -142,26 +262,26 @@ module.exports = {
     {
       name: 'contact',
       label: 'Contacto',
-      fields: [ 'name', 'slug', 'email', 'userId', 'phone', 'photo', 'education', 'socialMedia', 'institutionalMembership' ]
+      fields: ['name', 'slug', 'email', 'userId', 'phone', 'photo', 'education', 'socialMedia', 'institutionalMembership']
     },
     {
       name: 'interests',
       label: 'Intereses',
-      fields: ['fieldsOfInterest', 'fieldsOfKnowledge', 'lookingFor', 'collaborateIn'] 
+      fields: ['fieldsOfInterest', 'fieldsOfKnowledge', 'lookingFor', 'collaborateIn']
     },
     {
       name: 'project',
       label: 'Proyecto',
-      fields: [ '_projects' ]
+      fields: ['_projects']
     },
     {
       name: 'admin',
       label: 'Administrativo',
-      fields: ['published', 'centralCommittee', 'tags' ]
+      fields: ['published', 'centralCommittee', 'tags']
     }
   ],
-  construct: function(self, options) {
-    self.beforeSave = function(req, piece, options, callback) {
+  construct: function (self, options) {
+    self.beforeSave = function (req, piece, options, callback) {
       piece.title = piece.name;
       /* piece.slug = slugify(piece.name); */
       return callback();
