@@ -33,18 +33,18 @@ function setup(type) {
   else if (
     urlactual.includes("/miembros/") == true ||
     urlactual == `${domain}comite-base-historico` ||
-    urlactual == `${domain}colaboradores` ||
+    urlactual == `${domain}aliados` ||
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
-    urlactual == `${domain}noticias` ||
+    urlactual == `${domain}novedades` ||
     urlactual == `${domain}convocatorias` ||
     urlactual == `${domain}proyectos` ||
     urlactual.includes("/proyectos/") == true ||
     urlactual == `${ip}comite-base-historico` ||
-    urlactual == `${ip}colaboradores` ||
+    urlactual == `${ip}aliados` ||
     urlactual == `${ip}actualizaciones` ||
     urlactual == `${ip}contacto` ||
-    urlactual == `${ip}noticias` ||
+    urlactual == `${ip}novedades` ||
     urlactual == `${ip}convocatorias` ||
     urlactual == `${ip}proyectos`
   ) {
@@ -70,18 +70,18 @@ function draw() {
   }
   if (urlactual.includes("/miembros/") == true ||
     urlactual == `${domain}comite-base-historico` ||
-    urlactual == `${domain}colaboradores` ||
+    urlactual == `${domain}aliados` ||
     urlactual == `${domain}actualizaciones` ||
     urlactual == `${domain}contacto` ||
     urlactual == `${domain}convocatorias` ||
     urlactual == `${domain}proyectos` ||
-    urlactual == `${domain}noticias` ||
+    urlactual == `${domain}novedades` ||
     urlactual.includes("/proyectos/") == true ||
     urlactual == `${ip}comite-base-historico` ||
-    urlactual == `${ip}colaboradores` ||
+    urlactual == `${ip}aliados` ||
     urlactual == `${ip}actualizaciones` ||
     urlactual == `${ip}contacto` ||
-    urlactual == `${ip}noticias` ||
+    urlactual == `${ip}novedades` ||
     urlactual == `${ip}convocatorias` ||
     urlactual == `${ip}proyectos`) {
     angle += 0.002;
@@ -100,15 +100,15 @@ function makeParticles(type) {
 
     if (urlactual.includes("/miembros/") == true ||
       urlactual == `${domain}comite-base-historico` ||
-      urlactual == `${domain}colaboradores` ||
+      urlactual == `${domain}aliados` ||
       urlactual == `${domain}actualizaciones` ||
       urlactual == `${domain}contacto` ||
       urlactual == `${domain}convocatorias` ||
       urlactual == `${domain}proyectos` ||
       urlactual == `${ip}comite-base-historico` ||
-      urlactual == `${ip}colaboradores` ||
-      urlactual == `${domain}noticias` ||
-      urlactual == `${ip}noticias` ||
+      urlactual == `${ip}aliados` ||
+      urlactual == `${domain}novedades` ||
+      urlactual == `${ip}novedades` ||
       urlactual == `${ip}actualizaciones` ||
       urlactual == `${ip}contacto` ||
       urlactual == `${ip}convocatorias` ||
